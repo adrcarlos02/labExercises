@@ -1,0 +1,36 @@
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises [main]
+# ls
+Module1         README.md
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises [main]
+# cd Module1
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1 [main]
+# ls
+Lab1Exercise
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1 [main]
+# mkdir Lab2Exercises
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1 [main]
+# ls
+Lab1Exercise    Lab2Exercises
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1 [main]
+# cd Lab2Exercises 
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# ls
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# mkdir Lab2Exercises.txt
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# mkdir exercise2.html
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# ls
+Lab2Exercises.txt       exercise2.html
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# rm -rf "Lab2Exercises.txt/"
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# rm -rf "exercise2.html"
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# ls
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# touch lab2Exercise.txt
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# touch exercise2.html
+johnadriancarlos@Johns-MacBook-Pro-3 ~/Documents/SE/IOD/labExercises/Module1/Lab2Exercises [main]
+# 
