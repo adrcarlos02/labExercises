@@ -45,7 +45,7 @@
       column2.style.backgroundColor = 'rgb(210, 85, 17)'
      
       const changetext1 =  document.getElementById('heading2');
-      changetext1.innerText = 'Fire';
+      changetext1.innerText = 'FIRE';
   });
 
     function changetext2() {
