@@ -41,3 +41,7 @@ img {
   border: 1px solid #ccc;
   object-fit: cover;
 }
+
+#heading {
+  color:#ccc
+}
