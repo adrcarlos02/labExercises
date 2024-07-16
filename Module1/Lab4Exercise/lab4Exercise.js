@@ -58,3 +58,7 @@ let str1 = "Hello";
 let str2 = " John!"
 let concatenatedString = str1 + str2;
 console.log(concatenatedString);
+
+
+//answers printed on screen
+
