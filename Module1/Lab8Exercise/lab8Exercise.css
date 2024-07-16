@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: url('lab8background/Fire1.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+h1 {
+  margin-top: 0;
+}
+
+#centered-container {
+  background-color: #181717ca;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #3d3b3b;
+}
+
+#dice-container {
+  margin: 20px 0;
+}
+
+#dice-list {
+  margin: 50px 0;
+}
+
+.dice {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 30px;
+  background-color: #ee9d10eb;
+  border: 3px solid #ebeae6;
+  border-radius: 4px;
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(224, 92, 92);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+
