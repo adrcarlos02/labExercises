@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //(list) reference made in conjuction to html elements using an ID system- will connect the script and elements to form functionaity//
   
       const backgroundMusic = document.getElementById('music');
-  
+
   
       //this array will contain the different dices- left empty as the user will have the ability to add more dice to the array up to 7 dices
   
