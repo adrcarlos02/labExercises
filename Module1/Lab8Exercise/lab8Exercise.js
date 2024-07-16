@@ -84,5 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
           // Play background music after user interaction
-          document.body.addEventListener('alert');
+
+          document.body.addEventListener('alert', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+            }
+        });
+    
 });
