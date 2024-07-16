@@ -1,0 +1,24 @@
+The user can choose on how many faces the dice can have up to 7 
+Set 1 Tetrahedron (4 sides)
+Set 2 Cube        (6 sides)
+Set 3 Octahedron  (8 sides)
+Set 4 Pentagonal Trapezohedron (10 sides) (0-9) 
+Set 5 Pentagonal Trapezohedron (10 sides) (00-90)
+Set 6 Dodecahedron (12 sides)
+Set 7 Icosahedron  (20 sides)
+
+
+The user should be able to roll their chosen dice to see the random outcome
+
+The user can delete the dice 
+
+
+
+
+Instruction
+1. choose a set of dice
+2. Add selected dice to the tray , the chosenn type of dice will be shown on the tray 
+2a. If the user chooses a wrong set of dice, the user can delete it by clicking on the x-button on the top right
+3. The user can roll the dice withot limits. 
+
+
