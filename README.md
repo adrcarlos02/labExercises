@@ -10,3 +10,12 @@ Lab Exercise 6 (Creating a json object variable for a book)
 Lab Exercise 7 (Adding parameters/ specification comments to the 4 mathematical operation functions)
 Lab Exercise 8 (Dice Game) 
 Lab Exercise 9 (Github page)
+
+
+
+Module2 2
+Lab Exercise 1 (HTML)
+Lab Exercise 2 (CSS)
+Lab Exercise 3 (flexbox)
+Lab Exercise 4 (building your website)
+Lab Exercise 5 (lab 5 responsive website)
