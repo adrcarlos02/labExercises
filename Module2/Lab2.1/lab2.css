@@ -1,0 +1,31 @@
+
+.container {
+  display: flex;
+}
+.container div {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+
+video {
+  width: 300px;
+  height: 200px;
+}
+
+article{
+margin: 20px 0;
+padding: 20px;
+border: 1px solid black;
+}

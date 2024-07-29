@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    <meta name="author" content="Your Name" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <link rel="stylesheet" href="lab2.css">
+  </head>
+  <body>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="form.html">Form</a>
+</nav>
+
+
+    <h1>"My HTML learning journey"</h1>
+
+    <article>
+      <h2>Learning elements - div, span, p, pre, ul, li, ol, article</h2>
+      <div class="container">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+      </div>
+
+      <p>p represents paragraph without preserving spacing</p>
+      <pre>
+Text in         a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+</pre
+      >
+
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>
+          Item 4
+          <ul>
+            <li>Nested Item 1</li>
+            <li>Nested Item 2</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ol>
+    </article>
+
+    <article>
+      <h2>Creating tables</h2>
+      <table>
+        <caption>
+          Example Table
+        </caption>
+        <thead>
+          <tr>
+            <th colspan="2">Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 3, Cell 4</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 3, Cell 4</td>
+          </tr>
+          <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+            <td>Row 3, Cell 4</td>
+          </tr>
+          <tr>
+            <td>Row 4, Cell 1</td>
+            <td>Row 4, Cell 2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Table Footer</td>
+          </tr>
+        </tfoot>
+      </table>
+    </article>
+    <article>
+      <h2>Image</h2>
+      <img src="https://picsum.photos/400/400" alt="Image 1: Random Photo" />
+      <img src="src/assets/html_lab_image.jpg" alt="Image 2: Sunrise" />
+
+      <h2>Video</h2>
+      <figure>
+        <video autoplay src="src/assets/flower.webm">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figcaption>Watch a beautiful flower.</figcaption>
+      </figure>
+
+      <h2>Audio</h2>
+      <figure>
+        <audio controls src="src/assets/t-rex-roar.mp3">
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+        <figcaption>Listen to a T-Rex roar.</figcaption>
+      </figure>
+    </article>
+
+  </body>
+</html>
+
