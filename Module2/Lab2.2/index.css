@@ -1,24 +1,341 @@
 /* I. Selectors */
 /* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
 
-/* Put styles for questions 2.1 and 2.2 here */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
 
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+
+
+.style-me1#style-me2 {
+  color: purple
+}
+
+
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+  background-color: red;
+}
+
+
+.my-children-are-styled>p {
+  background: lightgreen;
+}
 
 /* II. Box model and common properties */
 /* Put styles for questions 1-8 here */
 
+/* 1.*/
+.box {
+  background-color: gray;
+  /* 4-value syntax */
+  margin: 10px 20px 30px 40px;
+  padding: 5px 10px 15px 20px;
+}
+
+/* 2-value syntax */
+.box {
+  margin: 20px 40px;
+  padding: 10px 20px;
+}
+
+/* 1-value syntax */
+.box {
+  margin: 30px;
+  padding: 15px;
+}
+
+/* Using different units */
+.box {
+  margin: 2em 4em;
+  padding: 5% 10%;
+}
+
+/* Box element styling */
+.box {
+  background-color: lightblue;
+  margin: 20px;
+  padding: 10px;
+  color: black;
+  text-align: center;
+}
+
+
+/* 2.*/
+/* Box 1: Dimensions in px */
+.box {
+  width: 300px;
+  height: 200px;
+}
+
+/* Box 2: Dimensions in rem */
+.box {
+  width: 20rem;
+  height: 10rem;
+}
+
+/* Box 3: Dimensions in vh and vw with !important */
+.box {
+  width: 50vw !important;
+  height: 50vh !important;
+}
+
+
+/* 3. Box element styling (remove the number on the id name to apply changes  */
+.box {
+  background-color: lightblue;
+  margin: 20px;
+  padding: 10px;
+  color: black;
+  text-align: center;
+}
+
+/* Box 1: Dimensions in px */
+.box1 {
+  width: 3px;
+  height: 200px;
+  border: 5px dotted red;
+}
+
+/* Box 2: Dimensions in rem */
+.box2 {
+  width: 20rem;
+  height: 10rem;
+  border: 5px dashed green;
+}
+
+/* Box 3: Dimensions in vh and vw with !important */
+.box3 {
+  width: 50vw !important;
+  height: 50vh !important;
+  border: 10px solid blue;
+}
+
+
+
+/* 4.*/
+
+/*Content Box (content-box): The dimensions specified in the CSS (width and height) apply only to the content of the box. Any padding and border will increase the total size of the element.
+
+Border Box (border-box): The dimensions specified in the CSS (width and height) apply to the entire element, including content, padding, and border.
+ this means
+ The content-box will be bigger in size  than border-box, even though they both have a CSS width of 200px.
+
+
+*/
+
+/* 5.*/
+
+.box1 {
+  overflow: visible;
+  /* Default value- no apparent change */
+}
+
+.box2 {
+  overflow: hidden
+    /* any content overflowed will be hidden */
+  ;
+}
+
+.box2 {
+  overflow: scroll;
+  /* any content overflowed will be hidden but adds a scroll bar */
+}
+
+.box3 {
+  overflow: auto;
+  /* any content overflowed will be hidden but will add a scroll bar if needed */
+}
+ /* 6. Wide outline */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  outline: 10px solid red;
+ 
+}
+
+
+/* 7. turns into rounded shapes/ circles */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  outline: 10px solid red;
+  /* Wide outline */
+  padding: 10px;
+  /* Increase padding */
+  /* border-radius examples */
+  /* Uncomment one at a time to see the effect */
+  /* border-radius: 20px; */
+  /* border-radius: 1em; */
+  /* border-radius: 50%; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  outline: 10px solid red;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.box {
+  width: 150px;
+  height: 100px;
+  background-color: lightblue;
+  outline: 10px solid red;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+ /*8.*/
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  outline: 10px solid red;
+  padding: 10px;
+  border-radius: 20px; /* Example border-radius */
+  background-image: url('img1.png'); /* Set background image */
+  background-size: cover; /* Set background-size */
+  background-repeat: no-repeat; /* Set background-repeat */
+  background-position: center; /* Set background-position */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
 
 /* III. Positioning */
 /* Put styles for questions 1-3 here */
+/*Absolute - Element will be positioned relative to the colsest positioned ancestor or parent
 
+relative- element will be positioned relative to its original position (will not change document flow)
+
+*/
+.position-absolute {
+  position: absolute; /* Apply absolute position */
+  top: 0; /* Fix the element to the top of the page */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color for visibility */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.position-relative {
+  position: relative; /* Apply relative position */
+  background-color: lightgray; /* Different background color */
+  padding: 20px;
+  margin: 20px;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0; /* Change to right: 0; or combine left: 0; and right: 0; */
+  width: 100px; /* Adjust or remove if combining left and right */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.position-sticky {
+  position: sticky; /* Set sticky position */
+  top: 10px; /* Set top position value */
+  background-color: yellow; /* Different background color */
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
 
 /* IV. Styling text */
 /* Put styles for questions 1-10 here */
+.text-style {
+  color: #007BFF; /* Set font color */
+  font-size: 20px; /* Set font size */
+  line-height: 1.5; /* Set line height */
+  font-weight: 600; /* Set font weight */
+  font-family: "Roboto", sans-serif; /* Set font family to Roboto */
+  font-weight: 400; /* Set default font weight to 400 */
+  text-align: left;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-transform: lowercase;
+  text-decoration: underline;
+}
 
-
+  
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
+a:link {
+  color: #0000EE; /* Default blue color */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; /* No underline */
+}
 
+/* Hover, active, and focus states */
+a:hover, a:active, a:focus {
+  color: #00008B; /* Darker blue color */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Visited link style */
+a:visited {
+  color: #551A8B; /* Purple color */
+  font-style: italic; /* Italic font style */
+}
 
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
+
+.calc-style {
+  /*(width: 100vw; Fixed width to overflow the screen */
+  width: calc(100vw - 100px); /* Width 100px less than the screen width */
+  background-color: lightblue; /* Background color to see boundaries */
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.fixed-width-col {
+  width: 350px; /* Fixed width */
+  display: inline-block; /* Display as inline-block */
+  background-color: lightcoral; /* Background color for visibility */
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+  vertical-align: top; /* Align top to prevent vertical space issue */
+}
+
+.fluid-col {
+  display: inline-block; /* Display as inline-block */
+  width: calc(90% - 370px); /* Dynamically calculated width */
+  background-color: lightblue; /* Background color for visibility */
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+  vertical-align: top; /* Align top to prevent vertical space issue */
+}
