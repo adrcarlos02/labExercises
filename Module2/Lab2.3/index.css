@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+.background-1 {
+    background: #68B0AB;
+}
+
+.background-2 {
+    background: #8FC0A9;
+}
+
+.background-3 {
+    background: #C8D5B9;
+}
+
+.background-4 {
+    background: #FAF3DD;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.h-80 {
+    height: 80px;
+}
+
+.h-400 {
+    height: 400px;
+}
+
+.w-80 {
+    width: 80px;
+}
+
+/* Add your answers here, do not modify the above CSS */
