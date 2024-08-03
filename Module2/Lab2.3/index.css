@@ -40,4 +40,78 @@ a {
     width: 80px;
 }
 
+
+
 /* Add your answers here, do not modify the above CSS */
+
+.flex-container {
+    display: flex;
+    /* Uncomment if you need to change the flex direction to column */
+    /* flex-direction: column; */
+  }
+  
+  .flex-item-1 {
+    flex: 1;
+  }
+  
+  .flex-item-2 {
+    flex: 2;
+  }
+  
+  .flex-item-3 {
+    flex: 3;
+  }
+  
+  .flex-item-4 {
+    flex: 4;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-basis-item-50 {
+    flex-basis: 25%;
+  }
+  
+  .flex-menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 5px;
+    justify-content: flex-end; /* Default: align items to the right */
+  }
+  
+  .flex-menu-center {
+    justify-content: center;
+  }
+  
+  .flex-menu li {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .flex-menu li a {
+    display: block;
+    padding: 20px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .flex-menu .fourth-item {
+    order: 1;
+  }

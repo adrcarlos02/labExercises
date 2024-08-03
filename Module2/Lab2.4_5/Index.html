@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Carlos</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+  <section>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="media/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <audio id="background-audio" loop>
+      <source src="media/coin.mp3" type="audio/mp3">
+      Your browser does not support the audio tag.
+    </audio>
+  </section>
+    <nav>
+        <a href="resume.html">Resume</a>
+        <a href="hobbies.html">Gallery</a>
+    </nav>
+   
+    <div class="footer">
+        &copy; 2024 John Carlos
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('background-audio');
+        audio.play().catch(error => {
+          console.error('Audio playback failed:', error);
+        });
+      });
+    </script>
+</body>
+</html>

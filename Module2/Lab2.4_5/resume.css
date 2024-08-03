@@ -1,0 +1,161 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  color: #f3efef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  padding:5px;
+  background-color: #222222c5;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  max-width: 70%;
+  width: 100%;
+  margin: 20px;
+  justify-content: space-between; /* Distributes space between items */
+  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+}
+
+.right-container {
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #ffffffe7; /* Set the background color to white */
+  color: #333; /* Set the text color to dark grey */
+  margin-bottom: 20px; /* Adds space below containers when wrapping */
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 30%; /* 30% of the 70% container width */
+  margin-right: 5em; /* Adds space between the left and right container */
+}
+
+.left-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transform: scale(1.1); /* Zoom in the image by 10% */
+}
+
+.platform-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 2px;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(70% - 5em); /* Remaining space considering the margin */
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #444;
+  color: #cbc3c3;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .container {
+      max-width: 90%;
+  }
+
+  .left-container {
+      flex: 0 0 45%; /* Adjust the width for medium screens */
+      margin-right: 2em;
+  }
+
+  .right-container {
+      flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .left-container, .right-container {
+      flex: 0 0 100%;
+      margin-right: 0;
+  }
+
+  .left-container {
+      margin-bottom: 20px;
+  }
+
+  .right-container {
+      flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+      top: 10px;
+      left: 10px;
+  }
+
+  nav a {
+      margin-right: 10px;
+      font-size: 14px;
+  }
+
+  .section-title {
+      font-size: 20px;
+  }
+
+  .left-container img {
+      width: 120px;
+      height: 120px;
+  }
+
+  .platform-icons {
+      gap: 10px;
+  }
+
+  .icon img {
+      width: 20px;
+      height: 20px;
+  }
+}
