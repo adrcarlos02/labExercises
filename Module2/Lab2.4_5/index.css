@@ -3,12 +3,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
 }
 
 body, html {
   height: 100%;
   overflow: hidden;
+}
+
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 80;
+  font-style: normal;
 }
 
 /* Video Background */
@@ -25,7 +32,7 @@ body, html {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

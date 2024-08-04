@@ -1,0 +1,157 @@
+
+.section-title {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 60px; 
+}
+
+#intro {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 30px; 
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 70%;
+  width: 100%;
+  margin: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.right-container {
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #151515;
+  color: #e2dfdf;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(70% - 5em);
+}
+
+.healthcare-container, .tech-container {
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #151515;
+  color: #e2dfdf;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(70% - 5em);
+}
+
+.info-container {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 30%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #151515;
+  color: #e2dfdf;
+  margin-right: 5em;
+}
+
+.info-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transform: scale(1.1);
+}
+
+.platform-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 2px;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #444;
+  color: #cbc3c3;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .container {
+      max-width: 90%;
+  }
+
+  .info-container {
+      flex: 0 0 45%;
+      margin-right: 2em;
+  }
+
+  .right-container {
+      flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .info-container, .right-container {
+      flex: 0 0 100%;
+      margin-right: 0;
+  }
+
+  .info-container {
+      margin-bottom: 20px;
+  }
+
+  .right-container {
+      flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+      top: 10px;
+      left: 10px;
+  }
+
+  nav a {
+      margin-right: 10px;
+      font-size: 14px;
+  }
+
+  .section-title {
+      font-size: 20px;
+  }
+
+  .info-container img {
+      width: 120px;
+      height: 120px;
+  }
+
+  .platform-icons {
+      gap: 10px;
+  }
+
+  .icon img {
+      width: 20px;
+      height: 20px;
+  }
+}

@@ -1,42 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Carlos</title>
-       <link rel="stylesheet" href="resume.css">
-</head>
-<body>
+    <link rel="stylesheet" href="resume.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="video-background">
+      <video autoplay muted loop id="background-video">
+          <source src="media/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+   </div>
+
     <nav>
-        <a href="Index.html">Home</a>
-        <a href="hobbies.html">Gallery</a>
+      <a href="Index.html">Home</a>
+      <a href="hobbies.html">Gallery</a>
     </nav>
-    <div class="container">
-        <div class="left-container">
-            <img src="/media/thumbnail.jpeg" alt="John Doe">
-            <h2>John Carlos</h2>
-            <div class="platform-icons">
-                <a href="https://www.instagram.com/wheatbraed/?hl=en" target="_blank">📷</a>
-                <a href="mailto:adrcarlos02@gmail.com">📧</a>
-                <a href="https://artstation.com" target="_blank">🎨</a>
-            </div>
-        </div>
-        <div class="right-container">
-            <h2 class="section-title">Hello Everyone!</h2>
-            <p>Hello, my name is John. I am a student in the Software Engineering class at IOD and work fulltime as a Relief Clinical Manager, and Infection Control Lead in a residential aged care facility. 
-            
-            It's a big jump for me but I'm currently trying to do a career change and expanding my horizons, I have decided to follow my passion for technology
+
+    <main>
+      <div class="left-container">
+        <table class="info-table">
+          <tr>
+            <td class="thumbnail-cell">
+              <img src="media/thumbnail.jpeg" alt="John Carlos" class="thumbnail">
+            </td>
+          </tr>
+          <tr>
+            <td class="name-cell">
+              <h2>John Carlos</h2>
+            </td>
+          </tr>
+          <tr>
+            <td class="icons-cell">
+              <table class="icons-table">
+                <tr>
+                  <td>
+                    <a href="https://www.instagram.com/wheatbraed/?hl=en" target="_blank">
+                      <img src="media/icons/instagram.png" alt="Instagram" class="icon">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="mailto:adrcarlos02@gmail.com" class="email-icon">
+                      <img src="media/icons/email.png" alt="Email" class="icon">
+                      <span class="tooltip">adrcarlos02@gmail.com</span>
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://github.com/adrcarlos02" target="_blank">
+                      <img src="media/icons/github.png" alt="GitHub" class="icon">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://www.linkedin.com/in/john-carlos-867a56217/" target="_blank">
+                      <img src="media/icons/linkedin.png" alt="LinkedIn" class="icon">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://www.artstation.com/kleid" target="_blank">
+                      <img src="media/icons/artstation.png" alt="ArtStation" class="icon">
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="skills-cell">
+             
+            </td>
+          </tr>
+        </table>
+      </div>
+    
+      <div class="right-container">
+        <div class="intro-container">
+          <h2 class="section-title">Hello Everyone!</h2>
+            <p id="intro">
+              I'm John, a Relief Clinical Manager and Infection Control Lead by day, and a Software Engineering student at the Institute of Data by night.
             </p>
-            <h3>Healthcare Experience</h3>
-            <picture>
-              I have a comprehensive background in nursing, with six years of studies—two years in Australia and four years in the Philippines. My three years of geriatric nursing experience cover palliative care, wound care, medication management, and clinical assessments. I have also completed postgraduate studies in Infection Prevention Control, during which I developed a facility-specific outbreak management plan.
-            <p>
-            <h3>IT Experience</h3>
-            My IT journey began in high school, where I built a simple website using HTML and gained experience with Linux OS. I am proficient in Office tools like Word, PowerPoint, and Excel, and I effectively use Health Metric Systems (Ecase) in my current role. Additionally, I have a solid understanding of both Mac and Windows operating systems. Cure
-        </div>
-    </div>
-    <div class="footer">
-        &copy; 2024 John Doe
-    </div>
-</body>
+            <p id="intro1">
+              In my daily role, I manage clinical operations and lead infection control initiatives, ensuring the highest standards of patient care and safety. By night, I immerse myself in the world of software engineering, learning to develop innovative tech solutions.
+            </p>
+            <p id="intro1">   Balancing both healthcare and technology, I am passionate about exploring new frontiers and integrating my extensive healthcare background with cutting-edge tech skills. My goal is to drive advancements in both fields, creating solutions that improve patient outcomes and streamline healthcare processes. Join me on this exciting journey as I merge the worlds of healthcare and technology to make a meaningful impact.</p>
+            <p class="arrow-container">
+              <img src="media/icons/downarrow.png" alt="Arrow Down" class="arrow-icon">
+            </p>
+       </div>
+
+       <div class="healthcare-container">
+        <h3 id="healthcare-title">Healthcare Experience</h3>
+        <table>
+          <tr>
+            <td><div class="icon-background"><img src="media/icons/graduation-hat.png" alt="Icon 1" class="icon"></div></td>
+            <td>
+              <strong>Six years of nursing studies:</strong><br>
+              Curtin University: Nursing (2019-2020)<br>
+              University of Santo Tomas: Nursing (2014-2018)
+            </td>
+          </tr>
+          <tr>
+            <td><div class="icon-background"><img src="media/icons/nursing-home.png" alt="Icon 2" class="icon"></div></td>
+            <td>
+              <strong>Geriatric nursing experience</strong> (2021-Present)<br>
+              Palliative care, Wound care, Medication management
+              Clinical assessments </br>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="icon-background"><img src="media/icons/bacteria.png" alt="Icon 3" class="icon"></div></td>
+            <td>
+              <strong>Infection Prevention Control Post graduate studies</strong> (2023)<br>
+              Developed a facility-specific outbreak management plan
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="tech-container">
+        <h3 id="tech-title">IT Experience</h3>
+        <table>
+          <tr>
+            <td><div class="icon-background"><img src="media/icons/coding.png" alt="HTML Icon" class="icon"></div></td>
+            <td><div class="icon-background"><img src="media/icons/office.png" alt="Linux Icon" class="icon"></div></td>
+            <td><div class="icon-background"><img src="media/icons/medical-prescription.png" alt="Office Icon" class="icon"></div></td>
+            <td><div class="icon-background"><img src="media/icons/IOD.jpeg" alt="Health Metric Icon" class="icon" id="IOD"></div></td>
+          </tr>
+          <tr>
+            <td>Webpage development and Javascript competent</td>
+            <td>Proficient in Office tools:<br>Word<br>PowerPoint<br>Excel</td>
+            <td>Effectively use Health Metric Systems (Ecase) and Mirius in my current role</td>
+            <td>Ongoing studies at Institute of Data as a Software engineer</td>
+          </tr>
+          
+        </table>
+      </div>
+    
+    </main>
+
+    <div class="footer">&copy; 2024 John Carlos</div>
+  </body>
 </html>

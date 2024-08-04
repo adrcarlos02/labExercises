@@ -1,13 +1,17 @@
-body {
-  font-family: Helvetica, Arial, sans-serif;
+/* Universal Styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #222222;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: #111111;
   color: #f3efef;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
 }
 
@@ -15,8 +19,9 @@ nav {
   position: fixed;
   top: 10px;
   left: 20px;
-  padding:5px;
+  padding: 5px;
   background-color: #222222c5;
+  z-index: 3;
 }
 
 nav a {
@@ -26,65 +31,324 @@ nav a {
   font-weight: bold;
 }
 
-.container {
+p {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+h2 {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 50px;
+  margin: 0;
+}
+
+h3 {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+main {
+  width: 80%;
+  margin: 100px auto 50px auto;
   display: flex;
-  max-width: 70%;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+#healthcare-title {
+  font-weight: bold;
+}
+
+#tech-title {
+  font-weight: bold;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 20px;
-  justify-content: space-between; /* Distributes space between items */
-  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.left-container {
+  position: fixed;
+  top: 100px;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #d66228;
+  color: #e2dfdf;
+  z-index: 3;
+}
+
+.info-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.info-table td {
+  padding: 0;
+}
+
+.thumbnail-cell {
+  height: 40%;
+  vertical-align: middle;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.name-cell {
+  height: 10%;
+  /* Reduced height */
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.icons-cell {
+  height: 10%;
+  /* Reduced height */
+  vertical-align: middle;
+  padding-top: 0;
+}
+
+.icons-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.icons-table td {
+  padding: 5px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.skills-cell {
+  height: 20%;
+  vertical-align: middle;
+}
+
+.email-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.email-icon:hover .tooltip,
+a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .right-container {
   padding: 30px;
   box-sizing: border-box;
-  background-color: #ffffffe7; /* Set the background color to white */
-  color: #333; /* Set the text color to dark grey */
-  margin-bottom: 20px; /* Adds space below containers when wrapping */
-}
-
-.left-container {
+  background-color: #151515;
+  color: #e2dfdf;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 0 0 30%; /* 30% of the 70% container width */
-  margin-right: 5em; /* Adds space between the left and right container */
+  flex: 1;
+  margin-left: calc(30% + 25px);
+  height: calc(95vh - 150px);
+  overflow-y: scroll;
+  gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  z-index: 3;
 }
 
-.left-container img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 15px;
-  transform: scale(1.1); /* Zoom in the image by 10% */
+.right-container::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari, and Opera */
 }
 
-.platform-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 2px;
-}
-
-.icon img {
-  width: 24px;
-  height: 24px;
-}
-
-.right-container {
+.intro-container,
+.healthcare-container,
+.tech-container {
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #151515;
+  color: #e2dfdf;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc(70% - 5em); /* Remaining space considering the margin */
+  gap: 20px;
 }
+
+#intro {
+  font-size: 36px;
+  font-style: italic;
+}
+
+#intro1 {
+  font-size: 30px;
+}
+
 
 .section-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 80px;
+}
+
+.arrow-container {
+  text-align: center;
+}
+
+.arrow-icon {
+  width: 30px;
+  height: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.healthcare-container {
+  padding: 20px;
+  background-color: #151515;
+  color: #e2dfdf;
+  border-radius: 10px;
+}
+
+.healthcare-container h3 {
+  margin-bottom: 15px;
+}
+
+.healthcare-container table { 
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.healthcare-container td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.healthcare-container .icon {
+  width: 50px;
+  height: 50px;
+}
+
+.healthcare-container .icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.healthcare-container td:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-container {
+  padding: 20px;
+  background-color: #151515;
+  color: #e2dfdf;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tech-container h3 {
+  margin-bottom: 15px;
+}
+
+.tech-container table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  /* Center align the text */
+}
+
+.tech-container td {
+  padding: 10px;
+  vertical-align: top;
+  /* Align the content to the top */
+}
+
+.tech-container .icon {
+  width: 40px;
+  height: 40px;
+}
+
+.tech-container .icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+
+#IOD {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
 }
 
 .footer {
   text-align: center;
-  margin-top: 20px;
   padding: 10px;
   width: 100%;
   background-color: #444;
@@ -92,70 +356,118 @@ nav a {
   position: fixed;
   bottom: 0px;
   left: 0px;
+  z-index: 2;
 }
 
-/* Responsive adjustments */
+/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
-  .container {
-      max-width: 90%;
-  }
-
   .left-container {
-      flex: 0 0 45%; /* Adjust the width for medium screens */
-      margin-right: 2em;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 
   .right-container {
-      flex: 0 0 100%;
+    margin-left: 0;
+    height: auto;
+    overflow-y: visible;
+    width: 100%;
+    /* Ensure full width */
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tech-container table,
+  .healthcare-container table {
+    width: 100%;
+  }
+
+  .tech-container td,
+  .healthcare-container td {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-      align-items: center;
+  h2 {
+    font-size: 40px;
   }
 
-  .left-container, .right-container {
-      flex: 0 0 100%;
-      margin-right: 0;
+  #intro {
+    font-size: 28px;
   }
 
-  .left-container {
-      margin-bottom: 20px;
+  .section-title {
+    font-size: 60px;
   }
 
-  .right-container {
-      flex: 0 0 100%;
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .tech-container .icon,
+  .healthcare-container .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .thumbnail {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tech-container td,
+  .healthcare-container td {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  nav {
-      top: 10px;
-      left: 10px;
+  h2 {
+    font-size: 30px;
   }
 
-  nav a {
-      margin-right: 10px;
-      font-size: 14px;
+  #intro {
+    font-size: 20px;
   }
 
   .section-title {
-      font-size: 20px;
+    font-size: 40px;
   }
 
-  .left-container img {
-      width: 120px;
-      height: 120px;
+  .icon {
+    width: 20px;
+    height: 20px;
   }
 
-  .platform-icons {
-      gap: 10px;
+  .tech-container .icon,
+  .healthcare-container .icon {
+    width: 25px;
+    height: 25px;
   }
 
-  .icon img {
-      width: 20px;
-      height: 20px;
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .tech-container td,
+  .healthcare-container td {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
