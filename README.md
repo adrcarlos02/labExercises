@@ -13,9 +13,13 @@ Lab Exercise 9 (Github page)
 
 
 
-Module2 2
+Module2 
 Lab Exercise 1 (HTML)
 Lab Exercise 2 (CSS)
 Lab Exercise 3 (flexbox)
-Lab Exercise 4 (building your website)
-Lab Exercise 5 (lab 5 responsive website)
+Lab Exercise 4_5 (building your website) + (lab 5 responsive website)
+
+Module 3
+Basic JS
+Intermidiate JS
+Advance JS
