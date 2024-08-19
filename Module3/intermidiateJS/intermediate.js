@@ -61,3 +61,12 @@ const animals = ['Tiger', 'Giraffe']
 console.log(animals); 
 
 
+//a
+animals.push('Elephant', 'Lion');
+console.log(animals); // Output: ['Tiger', 'Giraffe', 'Elephant', 'Lion']
+
+//b. 
+animals.unshift('Monkey', 'Zebra');
+console.log(animals); // Output: ['Monkey', 'Zebra', 'Tiger', 'Giraffe', 'Elephant', 'Lion']
+
+
