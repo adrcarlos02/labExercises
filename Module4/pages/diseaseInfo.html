@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communicable Disease Search</title>
+    <link rel="stylesheet" href="/css/diseaseInfo.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="logo">I P C Z O N E</a>
+    </div>
+    <div class="container mt-5">
+        <h1 class="mb-4">Communicable Disease Search</h1>
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for a disease, precaution, symptom, or treatment...">
+        </div>
+        <div class="mb-4">
+            <select id="filterDropdown" class="form-control">
+                <option value="all">All Transmission Precautions</option>
+                <option value="Contact">Contact</option>
+                <option value="Droplet">Droplet</option>
+                <option value="Airborne">Airborne</option>
+                <option value="Vector-borne">Vector-borne</option>
+                <option value="Bloodborne">Bloodborne</option>
+                <option value="Fecal-Oral">Fecal-Oral</option>
+                <option value="Foodborne">Foodborne</option>
+                <option value="Waterborne">Waterborne</option>
+                <option value="Zoonotic">Zoonotic</option>
+            </select>
+        </div>
+        <div id="diseaseContainer" class="row"></div>
+        <div id="pagination" class="pagination mt-4"></div>
+        <div class="export-buttons">
+            <button onclick="exportAsJSON()">Export to JSON</button>
+        </div>
+    </div>
+
+    <script src="/js/diseaseInfo.js"></script>
+</body>
+</html>

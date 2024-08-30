@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Data Table</title>
+
+    <link rel="stylesheet" href="/css/surveillance.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">I P C Z O N E</a>
+    </nav>
+
+    <div>
+      <h1>COVID-19 Data Table 2020 - 2021</h1>
+
+      <p>
+        This table provides a detailed view of COVID-19 data in the United
+        States, covering the period from January 13, 2020, to March 7, 2021. The
+        data includes key metrics such as the number of positive and negative
+        cases, current hospitalizations, ICU admissions, ventilator usage, and
+        reported deaths. Additionally, it tracks daily increases in positive
+        cases and deaths, offering insights into the progression of the pandemic
+        over time.
+      </p>
+
+      <p>
+        Each row in the table represents a specific date, with corresponding
+        values for each metric across all states, making it a comprehensive
+        resource for understanding the impact of COVID-19 during this timeframe.
+      </p>
+    </div>
+
+    <div class="filters">
+      <label for="filter-date">Filter by Date (YYYYMMDD):</label>
+      <input type="text" id="filter-date" placeholder="Enter date" />
+
+      <label for="start-date">Start Date (YYYYMMDD):</label>
+      <input type="text" id="start-date" placeholder="Start date" />
+
+      <label for="end-date">End Date (YYYYMMDD):</label>
+      <input type="text" id="end-date" placeholder="End date" />
+
+      <label for="filter-positive">Filter by Positive Cases Above:</label>
+      <input
+        type="number"
+        id="filter-positive"
+        placeholder="Enter positive cases threshold"
+      />
+
+      <label for="filter-deaths">Filter by Deaths Above:</label>
+      <input
+        type="number"
+        id="filter-deaths"
+        placeholder="Enter death threshold"
+      />
+      
+      <div class="export-json">
+        <button id="export-json">Export to JSON</button>
+        <button id="clear-filters">Clear Filters</button>
+      </div>
+    </div>
+
+    <table id="covid-data-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>States</th>
+          <th>Positive</th>
+          <th>Negative</th>
+          <th>Hospitalized Currently</th>
+          <th>In ICU Currently</th>
+          <th>On Ventilator Currently</th>
+          <th>Deaths</th>
+          <th>Positive Increase</th>
+          <th>Death Increase</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be inserted here -->
+      </tbody>
+    </table>
+
+    <!-- Link to the surveillance.js file -->
+    <script src="/js/surveillance.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+  margin: 20px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Collapsible Button Styles */
+.filters-container {
+  margin: 0;
+  padding: 0 20px;
+  position: sticky;
+  top: 60px; /* Adjust to be below the navbar */
+  z-index: 999;
+  background-color: #e9ecef;
+}
+
+.collapsible {
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.collapsible:after {
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Filter Section Styles */
+.filters {
+  padding: 10px;
+  display: none; /* Collapsible initially hidden */
+  background-color: #e9ecef;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap properly */
+  gap: 10px; /* Space between filter elements */
+}
+
+.filters label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filters input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis for responsiveness */
+  min-width: 150px; /* Minimum width for smaller screens */
+  margin-bottom: 10px;
+}
+
+/* Table Container Styles */
+.table-container {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .filters input {
+      width: 100%; /* Make inputs full-width on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .collapsible {
+      font-size: 16px;
+  }
+
+  .filters input {
+      font-size: 14px; /* Adjust input font size for smaller screens */
+  }
+
+  th, td {
+      font-size: 14px; /* Adjust table font size for readability on smaller screens */
+  }
+}
+/* Navigation Bar Styles */
+.navbar {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .logo:hover {
+  text-decoration: underline;
+}
+
+.export-button {
+  background-color: #0056b3; /* Adjust to match your theme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.export-button:hover {
+  background-color: #004494;
+}

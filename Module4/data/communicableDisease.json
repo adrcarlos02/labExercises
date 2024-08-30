@@ -1,0 +1,1136 @@
+{
+  "communicableDiseases": [
+    {
+      "name": "Influenza",
+      "overview": "Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses.",
+      "symptoms": [
+        "Fever",
+        "Cough",
+        "Sore throat",
+        "Runny or stuffy nose",
+        "Muscle or body aches",
+        "Headaches",
+        "Fatigue"
+      ],
+      "treatment": [
+        "Antiviral drugs like oseltamivir",
+        "Rest",
+        "Increased fluid intake",
+        "Fever reducers"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "COVID-19",
+      "overview": "COVID-19 is an infectious disease caused by the coronavirus SARS-CoV-2.",
+      "symptoms": [
+        "Fever",
+        "Cough",
+        "Shortness of breath",
+        "Fatigue",
+        "Loss of taste or smell",
+        "Sore throat",
+        "Headaches"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Antiviral medications",
+        "Vaccination",
+        "Oxygen therapy for severe cases"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet and Contact (with airborne precautions for aerosol-generating procedures)",
+        "PPE": [
+          "N95 or higher-level respirator (for aerosol-generating procedures)",
+          "Surgical mask (for general care)",
+          "Gown",
+          "Gloves",
+          "Eye protection"
+        ]
+      }
+    },
+    {
+      "name": "Tuberculosis",
+      "overview": "Tuberculosis (TB) is a serious infectious disease that primarily affects the lungs.",
+      "symptoms": [
+        "Persistent cough",
+        "Chest pain",
+        "Coughing up blood",
+        "Fatigue",
+        "Weight loss",
+        "Night sweats"
+      ],
+      "treatment": [
+        "Long-term antibiotic therapy",
+        "Directly observed therapy",
+        "BCG vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Airborne",
+        "PPE": ["N95 or higher-level respirator", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "Malaria",
+      "overview": "Malaria is a life-threatening disease caused by parasites transmitted through the bites of infected mosquitoes.",
+      "symptoms": [
+        "Fever",
+        "Chills",
+        "Sweats",
+        "Headaches",
+        "Nausea and vomiting",
+        "Muscle pains",
+        "Fatigue"
+      ],
+      "treatment": [
+        "Antimalarial medications",
+        "Supportive care",
+        "Prevention through mosquito control"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne (not person-to-person)",
+        "PPE": ["Insect repellent", "Long-sleeved clothing", "Mosquito nets"]
+      }
+    },
+    {
+      "name": "HIV/AIDS",
+      "overview": "HIV (Human Immunodeficiency Virus) attacks the immune system and can lead to AIDS if not treated.",
+      "symptoms": [
+        "Fever",
+        "Chills",
+        "Rash",
+        "Night sweats",
+        "Fatigue",
+        "Sore throat",
+        "Swollen lymph nodes"
+      ],
+      "treatment": [
+        "Antiretroviral therapy (ART)",
+        "Regular monitoring",
+        "Safe sex practices",
+        "Pre-exposure prophylaxis (PrEP)"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Bloodborne",
+        "PPE": ["Gloves", "Gown", "Face shield (if splash risk)", "Standard precautions"]
+      }
+    },
+    {
+      "name": "Measles",
+      "overview": "Measles is a highly contagious viral disease that can cause serious health complications.",
+      "symptoms": [
+        "High fever",
+        "Cough",
+        "Runny nose",
+        "Red eyes",
+        "Rash",
+        "White spots inside the mouth"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Vitamin A supplementation",
+        "MMR vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Airborne",
+        "PPE": ["N95 or higher-level respirator", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "Cholera",
+      "overview": "Cholera is an acute diarrheal illness caused by infection of the intestine with Vibrio cholerae bacteria.",
+      "symptoms": [
+        "Watery diarrhea",
+        "Vomiting",
+        "Rapid heart rate",
+        "Loss of skin elasticity",
+        "Thirst",
+        "Muscle cramps"
+      ],
+      "treatment": [
+        "Rehydration",
+        "Antibiotics",
+        "Zinc supplementation",
+        "Safe water and sanitation"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Face shield (if splash risk)", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Dengue Fever",
+      "overview": "Dengue fever is a mosquito-borne viral infection causing flu-like illness and sometimes severe dengue.",
+      "symptoms": [
+        "High fever",
+        "Severe headache",
+        "Pain behind the eyes",
+        "Joint and muscle pain",
+        "Rash",
+        "Mild bleeding"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Avoid NSAIDs",
+        "Hospitalization for severe cases",
+        "Prevention through mosquito control"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne (not person-to-person)",
+        "PPE": ["Insect repellent", "Long-sleeved clothing", "Mosquito nets"]
+      }
+    },
+    {
+      "name": "Ebola Virus Disease",
+      "overview": "Ebola virus disease (EVD) is a severe, often fatal illness in humans caused by the Ebola virus.",
+      "symptoms": [
+        "Fever",
+        "Severe headache",
+        "Muscle pain",
+        "Weakness",
+        "Fatigue",
+        "Diarrhea",
+        "Vomiting",
+        "Abdominal pain",
+        "Unexplained bleeding"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Experimental treatments",
+        "Preventive measures like avoiding contact with infected individuals"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Contact and Droplet (strict contact precautions)",
+        "PPE": [
+          "N95 or higher-level respirator",
+          "Full-body gown",
+          "Double gloves",
+          "Face shield",
+          "Boot covers"
+        ]
+      }
+    },
+    {
+      "name": "Hepatitis B",
+      "overview": "Hepatitis B is a serious liver infection caused by the hepatitis B virus (HBV).",
+      "symptoms": [
+        "Yellowing of the skin and eyes (jaundice)",
+        "Dark urine",
+        "Fatigue",
+        "Nausea",
+        "Abdominal pain"
+      ],
+      "treatment": [
+        "Antiviral medications",
+        "Monitoring liver function",
+        "Hepatitis B vaccine",
+        "Avoiding alcohol and other liver toxins"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Bloodborne",
+        "PPE": ["Gloves", "Gown", "Face shield (if splash risk)", "Standard precautions"]
+      }
+    },
+    {
+      "name": "Zika Virus",
+      "overview": "Zika virus is a mosquito-borne flavivirus that can cause birth defects when pregnant women are infected.",
+      "symptoms": [
+        "Fever",
+        "Rash",
+        "Headache",
+        "Joint pain",
+        "Red eyes",
+        "Muscle pain"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Rest",
+        "Hydration",
+        "Prevention through mosquito control"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne (not person-to-person)",
+        "PPE": ["Insect repellent", "Long-sleeved clothing", "Mosquito nets"]
+      }
+    },
+    {
+      "name": "Mumps",
+      "overview": "Mumps is a viral infection that primarily affects the salivary glands, causing swelling and pain.",
+      "symptoms": [
+        "Swollen salivary glands",
+        "Fever",
+        "Headache",
+        "Muscle aches",
+        "Fatigue",
+        "Loss of appetite"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Pain relievers",
+        "Ice packs to reduce swelling",
+        "MMR vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "Polio",
+      "overview": "Polio is a highly infectious viral disease that can lead to paralysis and, in severe cases, death.",
+      "symptoms": [
+        "Fever",
+        "Fatigue",
+        "Headache",
+        "Vomiting",
+        "Stiffness in the neck",
+        "Pain in the limbs"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Physical therapy",
+        "Polio vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene", "Face shield (if splash risk)"]
+      }
+    },
+    {
+      "name": "Rubella",
+      "overview": "Rubella, also known as German measles, is a contagious viral infection that is preventable by vaccine.",
+      "symptoms": [
+        "Mild fever",
+        "Headache",
+        "Rash starting on the face",
+        "Red eyes",
+        "Aching joints"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Rest",
+        "MMR vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "Yellow Fever",
+      "overview": "Yellow fever is a viral disease transmitted by mosquitoes, characterized by fever, jaundice, and bleeding.",
+      "symptoms": [
+        "Fever",
+        "Chills",
+        "Headache",
+        "Back pain",
+        "Muscle aches",
+        "Loss of appetite",
+        "Jaundice"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Vaccination for prevention",
+        "Mosquito control measures"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne (not person-to-person)",
+        "PPE": ["Insect repellent", "Long-sleeved clothing", "Mosquito nets"]
+      }
+    },
+    {
+      "name": "Tetanus",
+      "overview": "Tetanus is a serious bacterial infection that causes painful muscle spasms and can lead to death.",
+      "symptoms": [
+        "Jaw cramping",
+        "Sudden, involuntary muscle spasms",
+        "Muscle stiffness",
+        "Trouble swallowing",
+        "Seizures",
+        "Headache"
+      ],
+      "treatment": [
+        "Wound care",
+        "Tetanus immune globulin",
+        "Antibiotics",
+        "Tetanus vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Wound care and environmental",
+        "PPE": ["Gloves", "Gown", "Face shield (if splash risk)", "Standard precautions"]
+      }
+    },
+    {
+      "name": "Pertussis (Whooping Cough)",
+      "overview": "Pertussis, or whooping cough, is a highly contagious respiratory disease known for uncontrollable, violent coughing.",
+      "symptoms": [
+        "Severe coughing fits",
+        "Whooping sound during inhalation",
+        "Vomiting after coughing",
+        "Exhaustion"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care",
+        "DTaP/Tdap vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "Smallpox",
+      "overview": "Smallpox is a serious and contagious viral disease that has been eradicated globally through vaccination efforts.",
+      "symptoms": [
+        "High fever",
+        "Fatigue",
+        "Headache",
+        "Backache",
+        "Rash that progresses to pus-filled sores"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Smallpox vaccination (in the event of exposure)"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Airborne and Contact",
+        "PPE": ["N95 or higher-level respirator", "Gown", "Gloves", "Eye protection"]
+      }
+    },
+    {
+      "name": "Chickenpox (Varicella)",
+      "overview": "Chickenpox is a highly contagious viral infection that causes an itchy rash with red spots and blisters.",
+      "symptoms": [
+        "Itchy rash",
+        "Red spots and blisters",
+        "Fever",
+        "Fatigue",
+        "Loss of appetite"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Antiviral medications in severe cases",
+        "Varicella vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Airborne and Contact",
+        "PPE": ["N95 or higher-level respirator", "Gown", "Gloves", "Eye protection"]
+      }
+    },
+    {
+      "name": "Scarlet Fever",
+      "overview": "Scarlet fever is a bacterial illness that develops in some people who have strep throat. It is characterized by a bright red rash.",
+      "symptoms": [
+        "Red rash",
+        "Sore throat",
+        "High fever",
+        "Strawberry-like appearance of the tongue"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care",
+        "Rest"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves"]
+      }
+    },
+    {
+      "name": "Norovirus",
+      "overview": "Norovirus is a highly contagious virus that causes vomiting and diarrhea. It spreads easily through contaminated food and surfaces.",
+      "symptoms": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Stomach cramps",
+        "Fever"
+      ],
+      "treatment": [
+        "Rehydration",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Contact (fecal-oral route)",
+        "PPE": ["Gloves", "Gown", "Hand hygiene", "Face shield (if splash risk)"]
+      }
+    },
+    {
+      "name": "RSV (Respiratory Syncytial Virus)",
+      "overview": "RSV is a common respiratory virus that usually causes mild, cold-like symptoms but can be serious in infants and older adults.",
+      "symptoms": [
+        "Runny nose",
+        "Decrease in appetite",
+        "Coughing",
+        "Sneezing",
+        "Fever",
+        "Wheezing"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Oxygen therapy for severe cases"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet and Contact",
+        "PPE": ["Surgical mask", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    },
+    {
+      "name": "Meningococcal Disease",
+      "overview": "Meningococcal disease is a serious bacterial infection that can cause meningitis or bloodstream infections (septicemia).",
+      "symptoms": [
+        "Sudden fever",
+        "Headache",
+        "Stiff neck",
+        "Nausea",
+        "Vomiting",
+        "Sensitivity to light",
+        "Altered mental status"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care",
+        "Vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves"]
+      }
+    },
+    {
+      "name": "Legionnaires' Disease",
+      "overview": "Legionnaires' disease is a severe form of pneumonia caused by Legionella bacteria, often found in water systems.",
+      "symptoms": [
+        "Cough",
+        "Shortness of breath",
+        "Fever",
+        "Muscle aches",
+        "Headaches"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Waterborne (not person-to-person)",
+        "PPE": ["Standard precautions", "Gloves (if handling contaminated water)"]
+      }
+    },
+    {
+      "name": "Anthrax",
+      "overview": "Anthrax is a serious infectious disease caused by Bacillus anthracis bacteria. It can affect the skin, lungs, and digestive system.",
+      "symptoms": [
+        "Skin sores",
+        "Fever and chills",
+        "Shortness of breath",
+        "Chest discomfort",
+        "Cough",
+        "Nausea and vomiting"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Antitoxins",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Contact (cutaneous form), Inhalation (inhalational form)",
+        "PPE": ["Gloves", "Gown", "N95 respirator", "Eye protection"]
+      }
+    },
+    {
+      "name": "Lyme Disease",
+      "overview": "Lyme disease is a bacterial infection spread by ticks, characterized by fever, headache, fatigue, and a characteristic skin rash.",
+      "symptoms": [
+        "Fever",
+        "Chills",
+        "Headache",
+        "Fatigue",
+        "Muscle and joint aches",
+        "Swollen lymph nodes",
+        "Rash"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne (not person-to-person)",
+        "PPE": ["Long-sleeved clothing", "Insect repellent"]
+      }
+    },
+    {
+      "name": "Toxoplasmosis",
+      "overview": "Toxoplasmosis is a parasitic disease caused by Toxoplasma gondii, often spread through undercooked meat or contact with cat feces.",
+      "symptoms": [
+        "Flu-like symptoms",
+        "Swollen lymph nodes",
+        "Muscle aches",
+        "Eye problems (if ocular toxoplasmosis)"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Foodborne, Zoonotic",
+        "PPE": ["Gloves", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Giardiasis",
+      "overview": "Giardiasis is an intestinal infection caused by the parasite Giardia. It spreads through contaminated water or food.",
+      "symptoms": [
+        "Diarrhea",
+        "Gas",
+        "Greasy stools",
+        "Stomach cramps",
+        "Upset stomach or nausea"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Rehydration",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Cryptosporidiosis",
+      "overview": "Cryptosporidiosis is a diarrheal disease caused by Cryptosporidium, a microscopic parasite that lives in the intestine.",
+      "symptoms": [
+        "Watery diarrhea",
+        "Stomach cramps",
+        "Dehydration",
+        "Nausea",
+        "Vomiting",
+        "Fever"
+      ],
+      "treatment": [
+        "Rehydration",
+        "Antiparasitic medications (if needed)",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene", "Face shield (if splash risk)"]
+      }
+    },
+    {
+      "name": "Hantavirus Pulmonary Syndrome",
+      "overview": "Hantavirus Pulmonary Syndrome (HPS) is a severe, sometimes fatal, respiratory disease in humans caused by hantaviruses.",
+      "symptoms": [
+        "Fatigue",
+        "Fever",
+        "Muscle aches",
+        "Dizziness",
+        "Chills",
+        "Nausea and vomiting",
+        "Shortness of breath"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Oxygen therapy",
+        "Intensive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Zoonotic (rodents)",
+        "PPE": ["N95 or higher-level respirator", "Gloves", "Gown", "Eye protection"]
+      }
+    },
+    {
+      "name": "Leptospirosis",
+      "overview": "Leptospirosis is a bacterial disease that affects humans and animals. It is caused by bacteria of the genus Leptospira.",
+      "symptoms": [
+        "High fever",
+        "Headache",
+        "Chills",
+        "Muscle aches",
+        "Vomiting",
+        "Jaundice",
+        "Red eyes"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Zoonotic, Waterborne",
+        "PPE": ["Gloves", "Gown", "Eye protection", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Erysipelas",
+      "overview": "Erysipelas is a bacterial infection of the upper dermis, usually caused by Streptococcus bacteria, leading to red, swollen, and painful skin.",
+      "symptoms": [
+        "Red, swollen, and painful skin",
+        "Fever",
+        "Chills",
+        "Fatigue",
+        "Blisters"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Contact",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Q Fever",
+      "overview": "Q fever is a bacterial infection caused by Coxiella burnetii. It is primarily a disease of cattle, sheep, and goats but can infect humans.",
+      "symptoms": [
+        "High fever",
+        "Severe headache",
+        "Fatigue",
+        "Chills",
+        "Sweats",
+        "Cough",
+        "Nausea"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Airborne, Zoonotic",
+        "PPE": ["N95 or higher-level respirator", "Gloves", "Gown", "Eye protection"]
+      }
+    },
+    {
+      "name": "Lassa Fever",
+      "overview": "Lassa fever is an acute viral hemorrhagic illness caused by Lassa virus, often spread by contact with infected rodent urine or droppings.",
+      "symptoms": [
+        "Fever",
+        "General weakness",
+        "Malaise",
+        "Headache",
+        "Sore throat",
+        "Muscle pain",
+        "Chest pain"
+      ],
+      "treatment": [
+        "Antiviral medication (e.g., ribavirin)",
+        "Supportive care",
+        "Isolation"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Contact, Zoonotic",
+        "PPE": ["N95 or higher-level respirator", "Gloves", "Gown", "Eye protection"]
+      }
+    },
+    {
+      "name": "Hepatitis A",
+      "overview": "Hepatitis A is a viral liver disease that can cause mild to severe illness. It is primarily transmitted through ingestion of contaminated food and water.",
+      "symptoms": [
+        "Fever",
+        "Fatigue",
+        "Loss of appetite",
+        "Nausea",
+        "Abdominal pain",
+        "Dark urine",
+        "Jaundice"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Hydration",
+        "Hepatitis A vaccine"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Hepatitis C",
+      "overview": "Hepatitis C is a liver infection caused by the hepatitis C virus (HCV). It is primarily spread through blood-to-blood contact.",
+      "symptoms": [
+        "Fever",
+        "Fatigue",
+        "Loss of appetite",
+        "Nausea",
+        "Vomiting",
+        "Abdominal pain",
+        "Dark urine",
+        "Jaundice"
+      ],
+      "treatment": [
+        "Antiviral medications",
+        "Regular monitoring of liver function",
+        "Avoidance of alcohol and other liver toxins"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Bloodborne",
+        "PPE": ["Gloves", "Gown", "Face shield (if splash risk)", "Standard precautions"]
+      }
+    },
+    {
+      "name": "Brucellosis",
+      "overview": "Brucellosis is an infectious disease caused by bacteria of the genus Brucella, typically spread through contact with infected animals or animal products.",
+      "symptoms": [
+        "Fever",
+        "Sweats",
+        "Malaise",
+        "Anorexia",
+        "Headache",
+        "Muscle pain",
+        "Joint pain"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Zoonotic",
+        "PPE": ["Gloves", "Gown", "Eye protection"]
+      }
+    },
+    {
+      "name": "Diphtheria",
+      "overview": "Diphtheria is a serious bacterial infection affecting the mucous membranes of the throat and nose, preventable by vaccine.",
+      "symptoms": [
+        "Sore throat",
+        "Fever",
+        "Swollen glands in the neck",
+        "Weakness",
+        "Thick gray coating on the throat and tonsils"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Diphtheria antitoxin",
+        "Supportive care",
+        "Vaccination"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet",
+        "PPE": ["Surgical mask", "Gown", "Gloves"]
+      }
+    },
+    {
+      "name": "Chikungunya",
+      "overview": "Chikungunya is a viral disease transmitted to humans by infected mosquitoes. It causes fever and severe joint pain.",
+      "symptoms": [
+        "Fever",
+        "Severe joint pain",
+        "Muscle pain",
+        "Headache",
+        "Nausea",
+        "Fatigue",
+        "Rash"
+      ],
+      "treatment": [
+        "Supportive care",
+        "Rest",
+        "Hydration",
+        "Pain relievers"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne",
+        "PPE": ["Insect repellent", "Long-sleeved clothing", "Mosquito nets"]
+      }
+    },
+    {
+      "name": "Typhoid Fever",
+      "overview": "Typhoid fever is a life-threatening illness caused by the bacterium Salmonella Typhi, transmitted through contaminated food and water.",
+      "symptoms": [
+        "Sustained high fever",
+        "Weakness",
+        "Stomach pain",
+        "Headache",
+        "Diarrhea or constipation",
+        "Cough",
+        "Loss of appetite"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Hydration",
+        "Rest"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Schistosomiasis",
+      "overview": "Schistosomiasis is a parasitic disease caused by blood flukes (trematodes) of the genus Schistosoma. It is spread through contact with contaminated water.",
+      "symptoms": [
+        "Rash or itchy skin",
+        "Fever",
+        "Chills",
+        "Cough",
+        "Muscle aches",
+        "Liver or kidney damage (chronic)"
+      ],
+      "treatment": [
+        "Antiparasitic medication (praziquantel)",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Waterborne",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Leishmaniasis",
+      "overview": "Leishmaniasis is a parasitic disease spread by the bite of infected sand flies. It can cause skin sores or affect internal organs.",
+      "symptoms": [
+        "Skin sores",
+        "Fever",
+        "Weight loss",
+        "Swollen spleen and liver",
+        "Anemia"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne",
+        "PPE": ["Insect repellent", "Long-sleeved clothing"]
+      }
+    },
+    {
+      "name": "Yersiniosis",
+      "overview": "Yersiniosis is an infection caused by bacteria of the genus Yersinia, usually through contaminated food, particularly raw or undercooked pork.",
+      "symptoms": [
+        "Fever",
+        "Abdominal pain",
+        "Diarrhea",
+        "Nausea",
+        "Vomiting"
+      ],
+      "treatment": [
+        "Antibiotics (if severe)",
+        "Rehydration",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Foodborne",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Campylobacteriosis",
+      "overview": "Campylobacteriosis is an infection caused by bacteria of the genus Campylobacter, commonly transmitted through contaminated food, especially poultry.",
+      "symptoms": [
+        "Diarrhea (often bloody)",
+        "Fever",
+        "Stomach cramps",
+        "Nausea",
+        "Vomiting"
+      ],
+      "treatment": [
+        "Rehydration",
+        "Antibiotics (if severe)",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Foodborne",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Toxocariasis",
+      "overview": "Toxocariasis is a parasitic disease caused by larvae of Toxocara roundworms, often spread through contact with contaminated soil or infected animals.",
+      "symptoms": [
+        "Fever",
+        "Coughing",
+        "Wheezing",
+        "Abdominal pain",
+        "Eye pain or vision loss (ocular toxocariasis)"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Zoonotic",
+        "PPE": ["Gloves", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Trichinellosis",
+      "overview": "Trichinellosis, also known as trichinosis, is a parasitic disease caused by eating raw or undercooked meat, especially pork, infected with Trichinella larvae.",
+      "symptoms": [
+        "Nausea",
+        "Diarrhea",
+        "Vomiting",
+        "Fatigue",
+        "Fever",
+        "Muscle pain"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Foodborne",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Ascariasis",
+      "overview": "Ascariasis is a parasitic infection caused by the roundworm Ascaris lumbricoides, commonly spread through contaminated soil or food.",
+      "symptoms": [
+        "Abdominal pain",
+        "Coughing",
+        "Wheezing",
+        "Malnutrition",
+        "Intestinal blockage (in severe cases)"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Onchocerciasis (River Blindness)",
+      "overview": "Onchocerciasis, also known as river blindness, is a parasitic disease caused by infection with Onchocerca volvulus, transmitted through the bite of infected blackflies.",
+      "symptoms": [
+        "Severe itching",
+        "Skin rashes",
+        "Nodules under the skin",
+        "Vision impairment or blindness"
+      ],
+      "treatment": [
+        "Antiparasitic medications (ivermectin)",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne",
+        "PPE": ["Insect repellent", "Long-sleeved clothing"]
+      }
+    },
+    {
+      "name": "Filariasis",
+      "overview": "Filariasis is a parasitic disease caused by infection with filarial worms, transmitted through the bites of infected mosquitoes or flies.",
+      "symptoms": [
+        "Swelling of limbs (lymphedema)",
+        "Skin thickening (elephantiasis)",
+        "Genital swelling",
+        "Fever"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne",
+        "PPE": ["Insect repellent", "Long-sleeved clothing"]
+      }
+    },
+    {
+      "name": "Strongyloidiasis",
+      "overview": "Strongyloidiasis is a parasitic infection caused by the roundworm Strongyloides stercoralis, often spread through contact with contaminated soil.",
+      "symptoms": [
+        "Abdominal pain",
+        "Diarrhea",
+        "Cough",
+        "Rash",
+        "Weight loss"
+      ],
+      "treatment": [
+        "Antiparasitic medications",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Fecal-Oral",
+        "PPE": ["Gloves", "Gown", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Bartonellosis (Cat Scratch Disease)",
+      "overview": "Bartonellosis, also known as cat scratch disease, is an infection caused by bacteria of the genus Bartonella, often transmitted by scratches or bites from infected cats.",
+      "symptoms": [
+        "Swollen lymph nodes",
+        "Fever",
+        "Fatigue",
+        "Headache",
+        "Blisters or bumps at the site of the scratch or bite"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Zoonotic",
+        "PPE": ["Gloves", "Hand hygiene"]
+      }
+    },
+    {
+      "name": "Plague",
+      "overview": "Plague is a serious bacterial infection caused by Yersinia pestis, often spread through the bites of infected fleas or contact with contaminated fluids.",
+      "symptoms": [
+        "Sudden onset of fever",
+        "Headache",
+        "Chills",
+        "Weakness",
+        "Swollen and painful lymph nodes (bubonic plague)",
+        "Cough and difficulty breathing (pneumonic plague)"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care",
+        "Preventive measures (e.g., flea control)"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne, Droplet (pneumonic plague)",
+        "PPE": ["Gloves", "Gown", "N95 respirator", "Eye protection"]
+      }
+    },
+    {
+      "name": "Rickettsial Infections (Typhus)",
+      "overview": "Rickettsial infections, including typhus, are caused by bacteria of the genus Rickettsia, transmitted by fleas, lice, ticks, and mites.",
+      "symptoms": [
+        "Fever",
+        "Headache",
+        "Rash",
+        "Muscle pain",
+        "Confusion",
+        "Cough (in some cases)"
+      ],
+      "treatment": [
+        "Antibiotics",
+        "Supportive care",
+        "Preventive measures (e.g., insect repellent, avoiding infested areas)"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Vector-borne",
+        "PPE": ["Insect repellent", "Long-sleeved clothing"]
+      }
+    },
+    {
+      "name": "Zoonotic Influenza",
+      "overview": "Zoonotic influenza refers to influenza viruses that are transmitted from animals to humans, such as avian or swine flu.",
+      "symptoms": [
+        "Fever",
+        "Cough",
+        "Sore throat",
+        "Muscle aches",
+        "Headache",
+        "Fatigue"
+      ],
+      "treatment": [
+        "Antiviral medications",
+        "Supportive care",
+        "Preventive measures (e.g., vaccination, avoiding contact with infected animals)"
+      ],
+      "transmissionPrecautions": {
+        "classification": "Droplet, Zoonotic",
+        "PPE": ["Surgical mask", "Gown", "Gloves", "Eye protection (if needed)"]
+      }
+    }
+  ]
+}

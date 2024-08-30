@@ -1,0 +1,129 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+  background-color: #E7F2F0; /* Set background color */
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds spacing between cards */
+  justify-content: space-between;
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid black; /* Black outline */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+  padding: 20px;
+  background-color: #fff;
+  width: 180px; /* Card width */
+  height: 500px; /* Card height */
+  flex: 1 1 calc(25% - 20px); /* Four cards per row with spacing */
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Highlight colors for precautions */
+.precaution-contact { color: orange; font-weight: bold; }
+.precaution-droplet { color: green; font-weight: bold; }
+.precaution-airborne { color: blue; font-weight: bold; }
+.precaution-vectorborne { color: purple; font-weight: bold; }
+.precaution-bloodborne { color: red; font-weight: bold; }
+.precaution-fecaloral { color: grey; font-weight: bold; }
+.precaution-foodborne { color: lightgreen; font-weight: bold; }
+.precaution-zoonotic { color: pink; font-weight: bold; }
+.precaution-waterborne { color: rgb(41, 114, 240); font-weight: bold; }
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 1 1 100%; /* One card per row (stacked) */
+    width: 100%; /* Ensure cards take full width */
+  }
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .logo:hover {
+  text-decoration: underline;
+}

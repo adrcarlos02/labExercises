@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Register</title>
+    <link rel="stylesheet" href="/css/vaccination.css">
+</head>
+<body>
+    <header>
+        <h1>Vaccination Register</h1>
+        <nav class="navbar">
+            <a href="index.html" class="logo">I P C Z O N E</a>
+          </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Add a Vaccination Record</h2>
+            <form id="vaccination-form">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" required>
+                
+                <label for="vaccine-name">Vaccine Name:</label>
+                <input type="text" id="vaccine-name" required>
+                
+                <label for="date-administered">Date Administered:</label>
+                <input type="date" id="date-administered" required>
+                
+                <button type="submit">Add Record</button>
+            </form>
+        </section>
+        <section>
+            <h2>Vaccination Records</h2>
+            <ul id="vaccination-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Infection Book</p>
+    </footer>
+
+    <script src="../js/vaccination.js"></script>
+</body>
+</html>

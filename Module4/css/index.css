@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  padding: 20px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: clamp(5vw, 7vw, 10vw);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  word-wrap: break-word;
+  margin: 0 auto;
+}
+
+/* Parallax Background Section */
+.parallax-bg {
+  background-image: url('/path/to/your/background-image.jpg'); /* Replace with your image path */
+  background-attachment: fixed; /* Fixed position for parallax effect */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent repeating */
+  height: 400px; /* Adjust height as needed */
+  width: 100%;
+  position: relative; /* Ensure it covers the full width */
+  margin: 0;
+}
+
+/* Content Styles */
+.content {
+  padding: 0; /* Remove padding for full-width effect */
+  background: #FFFFFF;
+  width: 100%;
+  max-width: none; /* Allow full width */
+  margin: 0 auto;
+}
+
+/* Intro Paragraph */
+.intro p {
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.6;
+  padding: 0 10px; /* Keep some padding for readability */
+  box-sizing: border-box;
+}
+
+/* Section 1 Styles */
+.section1 {
+  background: #FFFFFF;
+  padding: 2rem;
+}
+
+/* Section 2 Styles */
+.section2 {
+  padding: 2rem;
+  background: #FFFFFF;
+  margin-bottom: 8rem; /* Add extra space below Section 2 */
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+/* Card Wrapper */
+.card-wrapper {
+  flex: 1 1 calc(25% - 15px);
+}
+
+/* Card Styles */
+.card {
+  background: #E7F2F0;
+  border: 2px solid #000000;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Card Image Styles */
+.card-image {
+  width: 100%;
+  padding-top: 75%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Title Styles */
+.card-title {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* Card Link Styles */
+.card-link {
+  padding: 0 10px 10px;
+  font-size: 0.75rem;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .card-wrapper {
+    flex: 1 1 calc(33.333% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex: 1 1 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .card-image {
+    padding-top: 100%;
+  }
+
+  .card-title {
+    font-size: 0.875rem;
+  }
+
+  .card-link {
+    font-size: 0.625rem;
+  }
+}
+
+/* Section 3: Publication */
+.section3 {
+  background: #E7F2F0;
+  padding: 1rem;
+  padding: 20px 0;
+}
+
+.publication {
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  height: auto; /* Changed to auto to fit content */
+  max-width: 800px;
+  margin: 3rem auto;
+  margin-bottom: 10px; 
+}
+
+.publication-title {
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  padding: 0 10px;
+}
+
+.publication p {
+  font-size: 1.0vw;
+  line-height: 1.0;
+  padding: 5px;
+}
+
+/* Links Container */
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px;
+  background: white;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  width: 120px;
+  position: relative;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link:hover::after {
+  content: attr(title);
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: black;
+  margin: 0;
+}
+
+.footer-content {
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
