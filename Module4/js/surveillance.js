@@ -1,3 +1,6 @@
+
+//Fetching the Data
+
 let originalData = []; // Variable to hold the original data
 
 async function fetchCovidTrackingData() {

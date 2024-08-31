@@ -174,17 +174,19 @@ body {
 }
 
 .publication-title {
-  font-size: 1.5vw;
+  font-size: clamp(20px, 3vw, 30px);
   font-weight: 400;
   margin-bottom: 1.5rem;
   padding: 0 10px;
 }
 
 .publication p {
-  font-size: 1.0vw;
-  line-height: 1.0;
-  padding: 5px;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.6;
+  padding: 0 10px; /* Keep some padding for readability */
+  box-sizing: border-box;
 }
+
 
 /* Links Container */
 .links-container {
