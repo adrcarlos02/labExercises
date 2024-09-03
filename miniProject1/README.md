@@ -22,9 +22,9 @@ The design began with wireframes to visualize the layout and structure of the we
 ## Website Components
 
 1. **Communicable Disease Book:** Searchable and sortable disease information with color-coded precautions and pagination.
-2. **Immunization Statistics:** Displays data from an external API with filtering options.
+2. **Infection Surveillance:** Displays data from an external API with filtering options.
 3. **Health and Media (Future Feature):** Planned section for health-related articles, videos, and more.
-4. **Infection Surveillance:** Future plans for interactive data visualization with a database integration.
+4. **Immunisation register:** Future plans for interactive data visualization with a database integration.
 
 ## Data Sources and Processing
 
