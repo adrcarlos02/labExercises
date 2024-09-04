@@ -4,7 +4,7 @@ let currentPage = 1;
 const resultsPerPage = 3;
 
 // Fetch the internal JSON data
-fetch("/data/communicableDisease.json")
+fetch("/miniProject1/data/communicableDisease.json")
     .then(response => response.json())
     .then(data => {
         diseasesData = data.communicableDiseases;
