@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moment.js Exercises</title>
+
+  <!-- Moment.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.34/moment-timezone.min.js"></script>
+</head>
+<body>
+
+  <h1>Moment.js Exercises</h1>
+
+  <!-- Buttons to trigger JavaScript functions -->
+  <button onclick="calculateDaysBetween('1998-02-11')">Calculate Days Between Birthdate and Today</button>
+  <button onclick="calculateYearsMonthsDays('1998-02-11')">Calculate Years, Months, and Days Between Birthdate and Today</button>
+  <button onclick="closestToCurrentDate('2024-05-20', '2022-11-15')">Find Date Closest to Today</button>
+  <button onclick="compareTwoDates('2024-05-20', '2022-11-15')">Compare Two Dates</button>
+  <button onclick="displayCurrentTimeInLondon()">Show Current Time in London</button>
+
+  <!-- Output Section -->
+  <h2>Output:</h2>
+  <pre id="output"></pre>
+
+  <script>
+    // Function to calculate the number of days between your birthdate and today
+    function calculateDaysBetween(birthdate) {
+      const today = moment();
+      const birth = moment(birthdate);
+      const daysBetween = today.diff(birth, 'days');
+      document.getElementById('output').textContent = `Number of days between your birthdate and today: ${daysBetween} days`;
+    }
+
+    // Function to calculate the number of years, months, and days between your birthdate and today
+    function calculateYearsMonthsDays(birthdate) {
+      const today = moment();
+      const birth = moment(birthdate);
+      const years = today.diff(birth, 'years');
+      birth.add(years, 'years');
+      const months = today.diff(birth, 'months');
+      birth.add(months, 'months');
+      const days = today.diff(birth, 'days');
+      document.getElementById('output').textContent = `${years} years, ${months} months, and ${days} days`;
+    }
+
+    // Function to find the date closest to the current date
+    function closestToCurrentDate(date1, date2) {
+      const today = moment();
+      const dateA = moment(date1);
+      const dateB = moment(date2);
+      const diffA = Math.abs(today.diff(dateA));
+      const diffB = Math.abs(today.diff(dateB));
+      const closest = diffA < diffB ? date1 : date2;
+      document.getElementById('output').textContent = `The date closest to today is: ${closest}`;
+    }
+
+    // Function to compare two dates
+    function compareTwoDates(date1, date2) {
+      const dateA = moment(date1);
+      const dateB = moment(date2);
+      let result = '';
+      if (dateA.isBefore(dateB)) {
+        result = `${date1} is before ${date2}`;
+      } else if (dateA.isAfter(dateB)) {
+        result = `${date1} is after ${date2}`;
+      } else {
+        result = `${date1} and ${date2} are the same date`;
+      }
+      document.getElementById('output').textContent = result;
+    }
+
+    // Function to display the current time in London
+    function displayCurrentTimeInLondon() {
+      const londonTime = moment().tz('Europe/London').format('YYYY-MM-DD HH:mm:ss');
+      document.getElementById('output').textContent = `Current time in London: ${londonTime}`;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!-- for this lab, I incorporated all lab2 exercise in html for easy reviewing of code-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e3f2fd;
+      margin: 0;
+      padding: 20px;
+    }
+    .card {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 2.5em;
+      padding-bottom: 10px;
+    }
+    .card-text {
+      font-weight: 400;
+      font-size: 1.5em;
+    }
+    /* Add missing CSS for artist card */
+    .artist-card {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .artist-name {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .portfolio-item {
+      margin-top: 15px;
+    }
+    .portfolio-item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .portfolio-title {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<template id="card-template">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title"></div>
+      <div class="card-text"></div>
+    </div>
+  </div>
+</template>
+
+<div id="card-list"></div>
+
+<!-- original script-->
+<!--  
+<script>
+  function addCard() {
+     // clone the template
+     const template = document.getElementById("card-template")
+                .content.cloneNode(true);
+     // populate the template
+     template.querySelector('.card-title').innerText = 'My Card Title';
+     template.querySelector('.card-text').innerText = 'lorem ipsum ble bla';
+     // include the populated template into the page
+     document.querySelector('#card-list').appendChild(template);
+  }
+  
+  // Call the function to add the card
+  addCard();
+</script>
+-->
+
+
+<!-- exercise 1 answer-->
+ <!-- 
+<script>
+    // Modified addCard function that accepts dynamic content
+    function addCard(title, description) {
+       // clone the template
+       const template = document.getElementById("card-template")
+                  .content.cloneNode(true);
+       // populate the template with dynamic content
+       template.querySelector('.card-title').innerText = title;
+       template.querySelector('.card-text').innerText = description;
+       // include the populated template into the page
+       document.querySelector('#card-list').appendChild(template);
+    }
+
+    // Call the function with dynamic content
+    addCard('Dynamic Card Title 1', 'This is a dynamically added card description.');
+    addCard('Dynamic Card Title 2', 'Another card with different content.');
+</script>
+-->
+
+
+<!-- exercise 2 answer-->
+<!--
+<script>
+  // Define the data array
+  const data = [
+    {name: 'Bob', age: 23},
+    {name: 'Alice', age: 39}
+  ];
+
+  // Function to dynamically add cards
+  function addCard(title, description) {
+     // clone the template
+     const template = document.getElementById("card-template")
+                .content.cloneNode(true);
+     // populate the template with dynamic content
+     template.querySelector('.card-title').innerText = title;
+     template.querySelector('.card-text').innerText = description;
+     // include the populated template into the page
+     document.querySelector('#card-list').appendChild(template);
+  }
+
+  // Loop through the array and create a card for each object
+  data.forEach(person => {
+    addCard(person.name, `Age: ${person.age}`);
+  });
+</script>
+-->
+
+<!-- reates an empty box (or section) on the page where your artist cards can be placed -->
+<div id="artist-list"></div>
+
+<script>
+  // Define an artist with multiple portfolio items
+  const artist = {
+    name: "Van Gogh",
+    portfolio: [
+      { title: "Portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image" },
+      { title: "Sky", url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" }
+    ]
+  };
+
+  // Function to generate an artist profile card with portfolio items
+  function addArtistProfile(artist) {
+    const artistList = document.getElementById('artist-list');
+
+    // Create a div for the artist card
+    const artistCard = document.createElement('div');
+    artistCard.classList.add('artist-card');
+
+    // Add artist's name
+    const artistName = document.createElement('div');
+    artistName.classList.add('artist-name');
+    artistName.innerText = artist.name;
+    artistCard.appendChild(artistName);
+
+    // Loop through the artist's portfolio and add each item
+    artist.portfolio.forEach(item => {
+      const portfolioItem = document.createElement('div');
+      portfolioItem.classList.add('portfolio-item');
+
+      // Add image
+      const img = document.createElement('img');
+      img.src = item.url;
+      portfolioItem.appendChild(img);
+
+      // Add title
+      const title = document.createElement('div');
+      title.classList.add('portfolio-title');
+      title.innerText = item.title;
+      portfolioItem.appendChild(title);
+
+      artistCard.appendChild(portfolioItem);
+    });
+
+    // Append the artist card to the artist list
+    artistList.appendChild(artistCard);
+  }
+
+  // Call the function to generate the artist profile
+  addArtistProfile(artist);
+</script>
+
+</body>
+</html>
