@@ -1,0 +1,162 @@
+<!-- Just a heads up: I have combined the JavaScript, HTML, and CSS into a single file (eCommerce.html) for simplicity and easier review. However, ideally, these should be separated into different files for better organization and maintainability. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store eCommerce</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            height: 100%;
+        }
+        .card img {
+            height: 200px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Fake Store</h1>
+
+        <!-- Dropdown for categories -->
+        <div class="mb-3">
+            <label for="categoryFilter" class="form-label">Filter by Category:</label>
+            <select id="categoryFilter" class="form-select">
+                <option value="all">All Categories</option>
+            </select>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-3">
+            <label for="searchInput" class="form-label">Search for items:</label>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+        </div>
+
+        <!-- Sorting dropdown -->
+        <div class="mb-3">
+            <label for="sortBy" class="form-label">Sort By:</label>
+            <select id="sortBy" class="form-select">
+                <option value="title">Title</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
+
+        <!-- Container for items (Bootstrap grid) -->
+        <div class="row" id="productContainer"></div>
+    </div>
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const API_URL = 'https://fakestoreapi.com/products';
+        let allProducts = [];
+
+        // Fetch products from API
+        function fetchProducts() {
+            axios.get(API_URL)
+                .then(response => {
+                    allProducts = response.data;
+                    displayProducts(allProducts);
+                    populateCategories(allProducts);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // Display products in Bootstrap cards
+        function displayProducts(products) {
+            const productContainer = document.getElementById('productContainer');
+            productContainer.innerHTML = ''; // Clear container
+
+            products.forEach(product => {
+                const productCard = `
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.title}</h5>
+                                <p class="card-text">$${product.price}</p>
+                                <p class="card-text">${product.description.substring(0, 100)}...</p>
+                                <p class="card-text"><small class="text-muted">Category: ${product.category}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productContainer.insertAdjacentHTML('beforeend', productCard);
+            });
+        }
+
+        // Populate categories in the dropdown
+        function populateCategories(products) {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const categories = ['all', ...new Set(products.map(product => product.category))];
+
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = capitalizeFirstLetter(category);
+                categoryFilter.appendChild(option);
+            });
+        }
+
+        // Filter products by category
+        function filterByCategory(category) {
+            if (category === 'all') {
+                displayProducts(allProducts);
+            } else {
+                const filteredProducts = allProducts.filter(product => product.category === category);
+                displayProducts(filteredProducts);
+            }
+        }
+
+        // Search for products by title
+        function searchProducts(keyword) {
+            const filteredProducts = allProducts.filter(product =>
+                product.title.toLowerCase().includes(keyword.toLowerCase())
+            );
+            displayProducts(filteredProducts);
+        }
+
+        // Sort products by title or price
+        function sortProducts(criteria) {
+            const sortedProducts = [...allProducts].sort((a, b) => {
+                if (criteria === 'title') {
+                    return a.title.localeCompare(b.title);
+                } else if (criteria === 'price') {
+                    return a.price - b.price;
+                }
+            });
+            displayProducts(sortedProducts);
+        }
+
+        // Capitalize first letter of category
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        // Event Listeners
+        document.getElementById('categoryFilter').addEventListener('change', (event) => {
+            filterByCategory(event.target.value);
+        });
+
+        document.getElementById('searchInput').addEventListener('input', (event) => {
+            searchProducts(event.target.value);
+        });
+
+        document.getElementById('sortBy').addEventListener('change', (event) => {
+            sortProducts(event.target.value);
+        });
+
+        // Initial fetch
+        fetchProducts();
+    </script>
+
+</body>
+</html>
