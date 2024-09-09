@@ -1,25 +1,36 @@
-File directory to Lab exercises: /Users/johnadriancarlos/Documents/SE/IOD/labExercises
+**File Directory to Lab Exercises:**  
+`/Users/johnadriancarlos/Documents/SE/IOD/labExercises`
 
-Module 1 
-Lab Exercise 1 (Navigate to file system using Command line Interface/ Terminal)
-Lab Exercise 2 (Creating files on Visual Studio Code)
-Lab Exercise 3 (Altering website button)
-Lab Exercise 4 (creating 4 mathematical functions)
-Lab Exercise 5 (Array practice)
-Lab Exercise 6 (Creating a json object variable for a book)
-Lab Exercise 7 (Adding parameters/ specification comments to the 4 mathematical operation functions)
-Lab Exercise 8 (Dice Game) 
-Lab Exercise 9 (Github page)
+### **Module 1**  
+- Lab Exercise 1: Navigating the file system using CLI/Terminal  
+- Lab Exercise 2: Creating files in Visual Studio Code  
+- Lab Exercise 3: Altering website button  
+- Lab Exercise 4: Creating 4 mathematical functions  
+- Lab Exercise 5: Array practice  
+- Lab Exercise 6: Creating a JSON object for a book  
+- Lab Exercise 7: Adding parameters and comments to the 4 mathematical functions  
+- Lab Exercise 8: Dice Game  
+- Lab Exercise 9: GitHub page setup  
 
+### **Module 2**  
+- Lab Exercise 1: HTML basics  
+- Lab Exercise 2: CSS basics  
+- Lab Exercise 3: Flexbox  
+- Lab Exercise 4 & 5: Building a website and making it responsive  
 
+### **Module 3**  
+- Basic JavaScript  
+- Intermediate JavaScript  
+- Advanced JavaScript  
 
-Module2 
-Lab Exercise 1 (HTML)
-Lab Exercise 2 (CSS)
-Lab Exercise 3 (flexbox)
-Lab Exercise 4_5 (building your website) + (lab 5 responsive website)
-
-Module 3
-Basic JS
-Intermidiate JS
-Advance JS
+### **Module 4**  
+- **LabOne**: Utilizing Figma  
+- **LabTwo**: Creating an `addCard` function  
+- **LabThree**: Building a calculator  
+- **LabFour**: Dynamic card generation and responsiveness with Bootstrap  
+- **LabFive**: Managing and updating arrays  
+- **LabSix**: Fetching API data  
+- **LabSeven**: CSS animations  
+- **LabEight**: Date manipulation with Moment.js  
+- **LabNine**: Visualizing data with eCharts  
+- **LabTen**: Creating a simple eCommerce site
