@@ -9,6 +9,10 @@ const port = 3000;
 const testRoutes = require('./routes/myTestRoutes');
 const calculatorRoutes = require('./routes/calculatorRoutes');
 
+// Import Swagger dependencies
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json'); // Swagger document
+
 // parse requests of content-type - application/json
 app.use(express.json());
 
@@ -18,6 +22,9 @@ app.use('/calculator', calculatorRoutes);
 
 // Serve static content on port 3000
 app.use('/', express.static('public'));
+
+// Add Swagger documentation route
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Start the first app on port 3000
 app.listen(port, () => {
