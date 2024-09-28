@@ -1,3 +1,6 @@
+//Exercise 3: Extend your calculator.html so that it allows the user to access all 4 server-side calculator routes from Exercise 2 (Add, Multiply, Divide, Subtract) via a basic calculator interface.
+
+
 // calculatorLib.js - Library for basic calculator operations
 
 exports.add = (number1, number2) => {
