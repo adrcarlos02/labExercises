@@ -1,0 +1,79 @@
+/* Root container for centering everything */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Greeting fixed at the top */
+.greeting-header {
+  position: fixed; /* Keep it at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: white; /* Ensure the header has a background color to make it visible */
+  z-index: 10; /* Ensure it stays on top of other content */
+  padding: 1rem; /* Add padding for some space inside the header */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for a better visual */
+}
+
+/* Main content should have padding to avoid overlap with the fixed header */
+.main-content {
+  margin-top: 120px; /* Add space at the top to avoid overlap with the fixed greeting */
+  padding: 2rem;
+}
+
+/* Big Cats List title styling */
+.big-cats-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Grid container for the Big Cats list */
+/* Grid container for the Big Cats list */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  gap: 2rem; /* Space between grid items */
+  justify-items: center; /* Center the grid items */
+  padding: 2rem 0;
+}
+
+/* Individual cat card styling */
+.cat-card {
+  background-color: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.cat-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cat-card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.cat-card p {
+  font-style: italic;
+  color: #555;
+}
+
+.cat-card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Read the Docs section styling */
+.read-the-docs {
+  color: #888;
+  margin-top: 2rem;
+}
