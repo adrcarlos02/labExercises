@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Activates the line on the selected Nav Link*/
+.active hr { 
+  @apply block
+}
