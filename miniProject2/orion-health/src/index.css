@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&family=Raleway:wght@100..900&family=Roboto:wght@400;700;100&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*Activates the line on the selected Nav Link*/
-.active hr { 
-  @apply block
+/* Apply the Public Sans font family to all elements */
+* {
+  font-family: 'Public Sans', sans-serif; /* Ensure the font family is correctly applied */
 }
 
-::-webkit-scrollbar{
-  @apply hidden
+/* Activates the line on the selected Nav Link */
+.active hr {
+  @apply block; /* This assumes you have a horizontal rule in your navigation */
 }
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  @apply hidden; /* Hides scrollbar for webkit browsers */
+}
+
+/* Additional styles can go here */

@@ -34,7 +34,7 @@ import Dermatologist from './Dermatologist.svg'
 import General_physician from './General_physician.svg'
 import Gynecologist from './Gynecologist.svg'
 import Neurologist from './Neurologist.svg'
-import Pediatricians from './Pediatricians.svg'
+import Pediatrician from './Pediatricians.svg'
 
 
 export const assets = {
@@ -71,8 +71,8 @@ export const specialityData = [
         image: Dermatologist
     },
     {
-        speciality: 'Pediatricians',
-        image: Pediatricians
+        speciality: 'Pediatrician',
+        image: Pediatrician
     },
     {
         speciality: 'Neurologist',
@@ -127,7 +127,7 @@ export const doctors = [
         _id: 'doc4',
         name: 'Dr. Arizona Robbins',
         image: doc4,
-        speciality: 'Pediatricians',
+        speciality: 'Pediatrician',
         degree: 'MD',
         experience: '2 Years',
         about: 'Dr. Robbins has a passion for pediatrics and provides compassionate care to children, specializing in both general health and pediatric surgeries.',
@@ -211,7 +211,7 @@ export const doctors = [
         _id: 'doc10',
         name: 'Dr. Alex Karev',
         image: doc10,
-        speciality: 'Pediatricians',
+        speciality: 'Pediatrician',
         degree: 'MD',
         experience: '2 Years',
         about: 'Dr. Karev is a dedicated pediatrician, passionate about caring for children and specializing in neonatal surgery and intensive care.',

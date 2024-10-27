@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 
-const Header = () => {
+const Header = ({ specialityMenuRef }) => {
   const [isPressed, setIsPressed] = useState(false); // State to track if the button is pressed
+
+  const handleScroll = () => {
+    if (specialityMenuRef.current) {
+      specialityMenuRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="flex flex-col md:flex-row bg-navy-800 rounded-lg px-6 md:px-10 lg:px-20">
-      {/*----- Left Side (Text + Images + Button) ----- */}
-      <div className="md:w-1/2 flex flex-col items-start justify-start gap-4 pt-20 pb-6 h-full">
+      <div className="md:w-1/2 flex flex-col items-start justify-start gap-4 pt-20 pb-6 h-full pr-4"> {/* Added right padding */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-2">
           ORION Health<br />
-          <span className="text-1xl sm:text-2xl md:text-3xl lg:text-4xl">
-          Your Health, Our Priority
+          <span className="text-1xl sm:text-2xl md:text-3xl lg:text-4xl block"> {/* Added block class for wrapping */}
+            Your Health, Our Priority
           </span>
         </h1>
+        <p className="text-white text-sm sm:text-base md:text-lg lg:text-lg mt-2 max-w-xl"> {/* Added max-w-xl for wrapping */}
+          At ORION Health, we prioritise your well-being by offering high-quality healthcare services tailored to your needs, whether you seek a routine check-up, specialized treatment, or lifestyle advice to support your journey to better health.
+        </p>
         <div className="flex items-start gap-4 mt-4">
           <img
             src={assets.group_profiles}
@@ -26,11 +34,15 @@ const Header = () => {
           </p>
         </div>
         <a
-          href="" // Replace with the desired link
-          onMouseDown={() => setIsPressed(true)} // Set pressed state to true on mouse down
-          onMouseUp={() => setIsPressed(false)} // Reset pressed state to false on mouse up
-          onMouseLeave={() => setIsPressed(false)} // Reset pressed state if mouse leaves
-          className={`mt-4 inline-flex items-center ${
+          href="#" // Use '#' to avoid page reload
+          onMouseDown={() => setIsPressed(true)}
+          onMouseUp={() => setIsPressed(false)}
+          onMouseLeave={() => setIsPressed(false)}
+          onClick={(e) => {
+            e.preventDefault(); // Prevent default anchor click behavior
+            handleScroll(); // Call scroll function
+          }}
+          className={`mt-6 inline-flex items-center ${
             isPressed ? 'bg-purple-500' : 'bg-white text-black'
           } px-4 sm:px-6 py-3 rounded-lg hover:bg-gray-400 transition-all duration-200 transform hover:scale-105`}
         >
@@ -39,7 +51,6 @@ const Header = () => {
         </a>
       </div>
 
-      {/*----- Right Side (Large Image - Header Image) ----- */}
       <div className="md:w-1/2 flex items-center justify-center h-full">
         <img
           src={assets.header_img}
