@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&family=Raleway:wght@100..900&family=Roboto:wght@400;700;100&display=swap');
+@import 'swiper/swiper-bundle.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font settings */
+* {
+  font-family: 'Public Sans', sans-serif; /* Set global font to Public Sans */
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+/* Style for active Nav Links */
+.active hr {
+  @apply block border-t-2 border-blue-500; /* Adjust color as needed */
+}
+
+/* Hide the scrollbar but keep scrolling functionality */
+::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for webkit browsers */
+}
+
+/* Custom scrollbar styling for non-webkit browsers */
+* {
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Common Utility Classes */
+.btn-primary {
+  @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg 
+         hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg 
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-600;
+}
+
+/* Adjustments for the Login page */
+.login-container {
+  @apply flex items-center justify-center min-h-screen bg-cover bg-center;
+}
+
+.login-form {
+  @apply w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md backdrop-blur-sm;
+}
+
+.login-heading {
+  @apply text-2xl font-bold text-center text-gray-800;
+}
+
+/* Add responsive typography */
+@media (min-width: 768px) {
+  .login-heading {
+    @apply text-3xl; /* Increase heading size on larger screens */
+  }
+
+  .login-form {
+    @apply p-10; /* Increase padding on larger screens */
+  }
+}
+
+/* Add transitions for buttons and inputs */
+.btn-primary,
+.form-input {
+  @apply transition duration-200 ease-in-out; /* Smooth transition for interactive elements */
+}
+
+/* Add hover effects for the login form */
+.login-form:hover {
+  @apply shadow-lg; /* Increase shadow on hover for depth */
+}
