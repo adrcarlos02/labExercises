@@ -1,69 +1,34 @@
-// src/pages/Login.js
-import React, { useEffect, useState } from 'react';
+// src/pages/Signup.jsx
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { assets } from '../assets/assets'; 
-import { addUserProfile, checkUserCredentials } from '../assets/assets2'; 
+import { addUserProfile } from '../assets/assets2'; // Import addUserProfile function
 
-const Login = () => {
-  const bannerImages = [
-    assets.BannerChildHealth,
-    assets.BannerGeneralPhysician,
-    assets.BannerMaternalHealth,
-    assets.BannerNeurology,
-    assets.BannerSkinHealth,
-  ];
-  
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isSigningUp, setIsSigningUp] = useState(false);
+const Signup = ({ setUser }) => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [isSigningUp, setIsSigningUp] = useState(true); // Track if user is signing up or logging in
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bannerImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [bannerImages.length]);
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    if (isSigningUp) {
-      // Handle sign-up logic
-      const newUser = { email, name, password };
-      if (addUserProfile(newUser)) {
-        console.log('User created:', newUser);
-        setIsSigningUp(false); // Switch to login mode after signup
-        resetFormFields(); // Reset form fields after signup
-      } else {
-        alert('User already exists. Please try a different email.');
-      }
+    const newUser = { email, name, password };
+    if (addUserProfile(newUser)) { // Check if user was added successfully
+      setUser(newUser); // Set the user state upon successful signup
+      navigate(`/my-profile/${email}`); // Redirect to the user's profile
+      // Reset form fields after successful signup
+      setEmail('');
+      setName('');
+      setPassword('');
     } else {
-      // Handle login logic
-      if (checkUserCredentials(email, password)) {
-        console.log('Logging in with:', email);
-        localStorage.setItem('userEmail', email); // Store the user email in local storage
-        navigate(`/my-profile/${email}`); // Redirect to MyProfile with user email as userId
-        resetFormFields(); // Reset fields after successful login
-      } else {
-        console.log('Invalid credentials');
-        alert('Invalid email or password. Please try again.'); 
-      }
+      alert('User already exists. Please try a different email.');
     }
   };
 
-  const resetFormFields = () => {
-    setEmail('');
-    setPassword('');
-    setName('');
-  };
-
   return (
-    <div
-      className="flex items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bannerImages[currentImageIndex]})` }}
+    <div 
+      className="flex items-center justify-center min-h-screen bg-[#001f3f]" // Navy blue background
     >
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md backdrop-blur-sm">
         <h2 className="text-2xl font-bold text-center text-gray-800">{isSigningUp ? 'Sign Up' : 'Login'} to Your Account</h2>
@@ -130,4 +95,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

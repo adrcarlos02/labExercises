@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#5f6FFF",
+        primary: "#5f6FFF", // Custom primary color
         navy: {
           800: '#001f3f', // Custom navy color
         },

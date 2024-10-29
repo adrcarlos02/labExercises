@@ -3,6 +3,15 @@ import { specialityData } from "../assets/assets";
 import { Link } from "react-router-dom";
 
 const SpecialityMenu = forwardRef((props, ref) => {
+  // Map specialty names to layman terms
+  const specialityTerms = {
+    "General Physician": "General Physician",
+    "Gynecologist": "Maternal Health",
+    "Dermatologist": "Skin Health",
+    "Pediatrician": "Child Health",
+    "Neurologist": "Neurology"
+  };
+
   return (
     <div ref={ref} className="flex flex-col items-center gap-6 py-12 text-gray-800">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-center">Find by Speciality</h1>
@@ -23,7 +32,7 @@ const SpecialityMenu = forwardRef((props, ref) => {
                 alt={item.speciality} 
               />
             </div>
-            <p className="text-center mt-2">{item.speciality}</p>
+            <p className="text-center mt-2">{specialityTerms[item.speciality] || item.speciality}</p>
           </Link>
         ))}
       </div>

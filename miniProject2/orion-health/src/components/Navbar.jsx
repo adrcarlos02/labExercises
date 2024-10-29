@@ -1,90 +1,75 @@
-import React, { useState } from "react";
-import { assets } from "../assets/assets";
-import { NavLink, useNavigate } from "react-router-dom";
+// src/components/Navbar.js
+import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { assets } from '../assets/assets'; // Import your assets
 
-const Navbar = () => {
+const Navbar = ({ user, setUser }) => {
+  const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
 
-  const [showMenu, setShowMenu] = useState(false); // no token = logged out
-  const [token, setToken] = useState(true); // whenever we have the token, it means we're logged in
+  const handleLogout = () => {
+    setUser(null); // Clear user state
+    navigate('/login'); // Redirect to login page
+  };
 
   return (
-    <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
-      {" "}
-      {/* Adjusted padding */}
-      <img
-        onClick={() => navigate('/')}
-        className="cursor-pointer w-44 h-auto mb-4 md:mb-0 md:mr-4"
-        src={assets.logo}
-        alt="Logo"
-      />
-      <ul className="hidden md:flex items-center gap-5 font-medium">
-        {" "}
-        {/* Changed items-start to items-center */}
-        <NavLink to="/">
-          <li className="py-2 px-4"> HOME </li> {/* Added padding */}
-          <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-        </NavLink>
-        <NavLink to="/doctors">
-          <li className="py-2 px-4"> DOCTORS </li> {/* Added padding */}
-          <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-        </NavLink>
-        <NavLink to="/about">
-          <li className="py-2 px-4"> ABOUT </li> {/* Added padding */}
-          <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-        </NavLink>
-        <NavLink to="/contact">
-          <li className="py-2 px-4"> CONTACT </li> {/* Added padding */}
-          <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
-        </NavLink>
-      </ul>
-      <div className="flex items-center gap-4">
-        {/* Ternary operator to check the status of token (if true - we're logged in, otherwise we're logged out) */}
-        {token ? (
-          <div className="flex items-center gap-2 cursor-pointer group relative">
-            <img
-              className="w-9 rounded-full"
-              src={assets.profile_pic}
-              alt="Profile"
-            />
-            <img
-              className="w-2.5"
-              src={assets.dropdown_icon}
-              alt="Dropdown Icon"
-            />
-            <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block">
-              <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
-                <p
-                  onClick={() => navigate("/my-profile")}
-                  className="hover:text-black cursor-pointer"
-                >
-                  My Profile
-                </p>
-                <p
-                  onClick={() => navigate("/my-appointments")}
-                  className="hover:text-black cursor-pointer"
-                >
-                  My Appointments
-                </p>
-                <p
-                  onClick={() => setToken(false)}
-                  className="hover:text-black cursor-pointer"
-                >
-                  Logout
-                </p>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <button
-            onClick={() => navigate("/login")}
-            className="bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block"
-          >
-            Create Account
-          </button>
-        )}
+    <nav className="bg-white border-b border-gray-200 pb-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a onClick={() => navigate('/')} className="flex items-center space-x-3 cursor-pointer">
+          <img src={assets.logo} className="h-9" alt="Logo" />
+        </a>
+        <button
+          onClick={() => setShowMenu(!showMenu)} // Toggle mobile menu
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-multi-level"
+          aria-expanded={showMenu}
+          aria-label="Toggle navigation"
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+        <div className={`w-full md:block md:w-auto ${showMenu ? '' : 'hidden'}`}>
+          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0">
+            <li>
+              <NavLink to="/" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>Contact</NavLink>
+            </li>
+            {user ? (
+              <>
+                <li>
+                  <NavLink to={`/my-profile/${user.email}`} className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>Profile</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/doctors" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>Doctors</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/my-appointments" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>My Appointments</NavLink>
+                </li>
+                <li>
+                  <button onClick={handleLogout} className="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0">Logout</button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <NavLink to="/login" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>Login</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/signup" className={({ isActive }) => `block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 ${isActive ? 'text-blue-600' : ''}`}>Sign Up</NavLink>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

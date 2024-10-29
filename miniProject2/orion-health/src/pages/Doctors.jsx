@@ -38,7 +38,7 @@ const Doctors = () => {
     };
 
     return (
-        <div>
+        <div className="pt-8"> {/* Added padding at the top */}
             <p className='text-gray-600 mb-4'>Select through our extensive list of quality healthcare providers.</p>
             <div className="flex flex-col lg:flex-row gap-5 mt-5">
                 

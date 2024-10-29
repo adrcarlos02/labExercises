@@ -35,7 +35,11 @@ import General_physician from './General_physician.svg'
 import Gynecologist from './Gynecologist.svg'
 import Neurologist from './Neurologist.svg'
 import Pediatrician from './Pediatricians.svg'
-
+import BannerChildHealth from './BannerChildHealth.png';
+import BannerGeneralPhysician from './BannerGeneralPhysican.png';
+import BannerMaternalHealth from './BannerMaternalHealth.png';
+import BannerNeurology from './BannerNeurology.png';
+import BannerSkinHealth from './BannerSkinHealth.png';
 
 export const assets = {
     appointment_img,
@@ -54,7 +58,12 @@ export const assets = {
     dropdown_icon,
     upload_icon,
     stripe_logo,
-    razorpay_logo
+    razorpay_logo,
+    BannerChildHealth,
+    BannerGeneralPhysician,
+    BannerMaternalHealth,
+    BannerNeurology,
+    BannerSkinHealth,
 }
 
 export const specialityData = [
@@ -78,7 +87,7 @@ export const specialityData = [
         speciality: 'Neurologist',
         image: Neurologist
     },
-]
+];
 
 export const doctors = [
     {
@@ -89,7 +98,7 @@ export const doctors = [
         degree: 'MD',
         experience: '4 Years',
         about: 'Dr. Grey is known for her excellent diagnostic skills and her dedication to her patients. She focuses on preventive care and providing personalized medical solutions.',
-        fees: 50,
+        fees: 100,
         address: {
             line1: '17th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -103,7 +112,7 @@ export const doctors = [
         degree: 'MD',
         experience: '3 Years',
         about: 'Dr. Bailey is a skilled gynecologist and surgeon, known for her thorough approach to patient care and her commitment to advancing women’s health.',
-        fees: 60,
+        fees: 120,
         address: {
             line1: '27th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -117,7 +126,7 @@ export const doctors = [
         degree: 'MD',
         experience: '1 Year',
         about: 'Dr. Sloan is recognized for his expertise in skin treatments and cosmetic procedures, bringing a blend of science and aesthetics to his dermatology practice.',
-        fees: 30,
+        fees: 90,
         address: {
             line1: '37th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -131,7 +140,7 @@ export const doctors = [
         degree: 'MD',
         experience: '2 Years',
         about: 'Dr. Robbins has a passion for pediatrics and provides compassionate care to children, specializing in both general health and pediatric surgeries.',
-        fees: 40,
+        fees: 80,
         address: {
             line1: '47th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -145,7 +154,7 @@ export const doctors = [
         degree: 'MD',
         experience: '4 Years',
         about: 'Dr. Shepherd, a renowned neurologist and neurosurgeon, excels in complex brain surgeries and has a reputation for saving lives in critical situations.',
-        fees: 50,
+        fees: 100,
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -159,7 +168,7 @@ export const doctors = [
         degree: 'MD',
         experience: '4 Years',
         about: 'Dr. Shepherd is a brilliant neurosurgeon who specializes in innovative and high-risk procedures, often taking on cases others would avoid.',
-        fees: 50,
+        fees: 100,
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -173,7 +182,7 @@ export const doctors = [
         degree: 'MD',
         experience: '4 Years',
         about: 'Dr. Webber is a respected figure in the medical community, known for his leadership and extensive knowledge in general medicine and patient care.',
-        fees: 50,
+        fees: 100,
         address: {
             line1: '17th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -187,7 +196,7 @@ export const doctors = [
         degree: 'MD',
         experience: '3 Years',
         about: 'Dr. Montgomery is an expert in obstetrics and gynecology, renowned for her ability to handle both complex deliveries and high-risk pregnancies.',
-        fees: 60,
+        fees: 120,
         address: {
             line1: '27th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -201,7 +210,7 @@ export const doctors = [
         degree: 'MD',
         experience: '1 Year',
         about: 'Dr. Avery combines his dermatology practice with an interest in reconstructive surgery, offering a holistic approach to skin health and cosmetic solutions.',
-        fees: 30,
+        fees: 90,
         address: {
             line1: '37th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -215,7 +224,7 @@ export const doctors = [
         degree: 'MD',
         experience: '2 Years',
         about: 'Dr. Karev is a dedicated pediatrician, passionate about caring for children and specializing in neonatal surgery and intensive care.',
-        fees: 40,
+        fees: 80,
         address: {
             line1: '47th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -229,7 +238,7 @@ export const doctors = [
         degree: 'MD',
         experience: '4 Years',
         about: 'Dr. Pierce is an accomplished cardiothoracic and neurosurgeon, known for her precision and ability to solve complex medical cases.',
-        fees: 50,
+        fees: 100,
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -243,7 +252,7 @@ export const doctors = [
         degree: 'MD',
         experience: '4 Years',
         about: 'Dr. Hunt brings a military background to his neurosurgery practice, applying his trauma expertise to save lives in extreme conditions.',
-        fees: 50,
+        fees: 100,
         address: {
             line1: '57th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -251,13 +260,13 @@ export const doctors = [
     },
     {
         _id: 'doc13',
-        name: 'Dr. April Kepner',
+        name: 'Dr. Jo Wilson',
         image: doc13,
         speciality: 'General physician',
         degree: 'MD',
         experience: '4 Years',
-        about: 'Dr. Kepner is known for her thorough and empathetic approach to general medicine, always striving to provide the best care for her patients.',
-        fees: 50,
+        about: 'Dr. Wilson is a skilled general physician known for her patient-centered approach and ability to connect with individuals from all walks of life.',
+        fees: 100,
         address: {
             line1: '17th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -265,13 +274,13 @@ export const doctors = [
     },
     {
         _id: 'doc14',
-        name: 'Dr. Jo Wilson',
+        name: 'Dr. Callie Torres',
         image: doc14,
         speciality: 'Gynecologist',
         degree: 'MD',
         experience: '3 Years',
-        about: 'Dr. Wilson is a highly skilled gynecologist, dedicated to improving women’s health and specializing in reproductive medicine and prenatal care.',
-        fees: 60,
+        about: 'Dr. Torres is a talented gynecologist known for her innovative techniques and her dedication to women’s health.',
+        fees: 120,
         address: {
             line1: '27th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
@@ -279,16 +288,16 @@ export const doctors = [
     },
     {
         _id: 'doc15',
-        name: 'Dr. Lexie Grey',
+        name: 'Dr. Ben Warren',
         image: doc15,
-        speciality: 'Dermatologist',
+        speciality: 'Pediatrician',
         degree: 'MD',
-        experience: '1 Year',
-        about: 'Dr. Lexie Grey is a bright and talented dermatologist with a deep passion for both cosmetic and clinical skin care treatments.',
-        fees: 30,
+        experience: '2 Years',
+        about: 'Dr. Warren is committed to providing compassionate care to children and is known for his work in pediatric emergency medicine.',
+        fees: 80,
         address: {
-            line1: '37th Cross, Richmond',
+            line1: '47th Cross, Richmond',
             line2: 'Circle, Ring Road, Seattle'
         }
     },
-]
+];
