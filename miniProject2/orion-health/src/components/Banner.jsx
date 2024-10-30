@@ -10,9 +10,9 @@ const Banner = () => {
       {/* ---- Left Side ---- */}
       <div className='flex-1 py-8 sm:py-4 md:py-8 lg:py-10 lg:pl-5' style={{ flex: '30%' }}>
         <div className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-white'>
-          <p>Create your Account Today!</p>
+          <p>Invite Your Loved Ones to ORION Health!</p>
           <p className='mt-4 text-sm sm:text-base text-gray-300'>
-            Join Orion Health for easy access to consultations and healthcare services.
+          Help your family and friends access top-notch healthcare by creating an account for them. With ORION Health, staying healthy and connected has never been easier. Join us in prioritizing the well-being of those you care about!
           </p>
         </div>
         <button 
