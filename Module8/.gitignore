@@ -1,0 +1,20 @@
+# macOS-specific files
+.DS_Store
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Build directories
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp

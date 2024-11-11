@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "6731a6af32623a6036fe3d75"
+  },
+  "user_id": {
+    "$oid": "6731a5bf32623a6036fe3d71"
+  },
+  "title": "Exploring the Mountains",
+  "description": "A blog post about my latest hiking adventure in the mountains.",
+  "image_url": "https://example.com/images/mountains.png",
+  "post_type": "image",
+  "created_at": {
+    "$date": "2024-11-10T11:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2024-11-10T11:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6731a6af32623a6036fe3d76"
+  },
+  "user_id": {
+    "$oid": "6731a61f32623a6036fe3d73"
+  },
+  "title": "A Day at the Beach",
+  "description": "Sharing my serene experience at the beach.",
+  "image_url": "https://example.com/images/beach.png",
+  "post_type": "image",
+  "created_at": {
+    "$date": "2024-11-10T12:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2024-11-10T12:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6731a6af32623a6036fe3d77"
+  },
+  "user_id": {
+    "$oid": "6731a64d32623a6036fe3d74"
+  },
+  "title": "Tech Innovations",
+  "description": "Discussing the latest trends in technology and innovation.",
+  "image_url": null,
+  "post_type": "text",
+  "created_at": {
+    "$date": "2024-11-10T13:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2024-11-10T13:00:00.000Z"
+  }
+}]

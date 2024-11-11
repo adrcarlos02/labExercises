@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "6731a8bf32623a6036fe3d91"
+  },
+  "post_id": {
+    "$oid": "6731a6af32623a6036fe3d75"
+  },
+  "user_id": {
+    "$oid": "6731a64d32623a6036fe3d74"
+  },
+  "content": "This is an amazing post about the mountains! Keep it up!",
+  "comment_type": "text",
+  "created_at": {
+    "$date": "2024-11-10T15:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2024-11-10T15:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6731a8bf32623a6036fe3d92"
+  },
+  "post_id": {
+    "$oid": "6731a6af32623a6036fe3d76"
+  },
+  "user_id": {
+    "$oid": "6731a5bf32623a6036fe3d71"
+  },
+  "content": "The beach looks stunning! Thanks for sharing.",
+  "comment_type": "text",
+  "created_at": {
+    "$date": "2024-11-10T15:15:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2024-11-10T15:15:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6731a8bf32623a6036fe3d93"
+  },
+  "post_id": {
+    "$oid": "6731a6af32623a6036fe3d77"
+  },
+  "user_id": {
+    "$oid": "6731a61f32623a6036fe3d73"
+  },
+  "content": "Great insights on tech trends. Very informative!",
+  "comment_type": "text",
+  "created_at": {
+    "$date": "2024-11-10T15:30:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2024-11-10T15:30:00.000Z"
+  }
+}]

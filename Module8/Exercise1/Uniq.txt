@@ -1,0 +1,87 @@
+Logical Data Model
+
+	1.	Entities and Attributes:
+
+	Users:
+	•	user_id (Primary Key)
+	•	name
+	•	email
+	•	password
+	•	birthday
+	•	profile_picture (optional)
+	•	created_at
+	•	updated_at
+
+	Posts:
+	•	post_id (Primary Key)
+	•	user_id (Foreign Key to Users)
+	•	title
+	•	description
+	•	image_url (optional)
+	•	post_type (e.g., text, image, video)
+	•	created_at
+	•	updated_at
+  
+  Likes:
+	•	like_id (Primary Key)
+	•	post_id (Foreign Key to Posts)
+	•	user_id (Foreign Key to Users)
+	•	created_at
+
+	Comments:
+	•	comment_id (Primary Key)
+	•	post_id (Foreign Key to Posts)
+	•	user_id (Foreign Key to Users)
+	•	content
+	•	comment_type (e.g., text, emoji, reaction)
+	•	created_at
+	•	updated_at
+
+	2.	Relationships:
+	•	Users ↔ Posts: One-to-Many. A user can create multiple posts.
+	•	Users ↔ Likes: Many-to-Many. A user can like multiple posts, and each post can have multiple likes.
+	•	Users ↔ Comments: One-to-Many. A user can make multiple comments.
+	•	Posts ↔ Comments: One-to-Many. Each post can have multiple comments.
+	•	Posts ↔ Likes: One-to-Many. Each post can have multiple likes.
+
+
+	
+  ___________________________________________________
+
+
+Physical Data Model
+
+	1.	Users Table:
+	•	user_id (INT, Primary Key, Auto Increment)
+	•	name (VARCHAR(255), NOT NULL)
+	•	email (VARCHAR(255), UNIQUE, NOT NULL)
+	•	password (VARCHAR(255), NOT NULL)
+	•	birthday (DATE, NOT NULL)
+	•	profile_picture (VARCHAR(255), NULL)
+	•	created_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+	•	updated_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)
+
+	2.	Posts Table:
+	•	post_id (INT, Primary Key, Auto Increment)
+	•	user_id (INT, Foreign Key to Users(user_id), NOT NULL)
+	•	title (VARCHAR(255), NOT NULL)
+	•	description (TEXT, NOT NULL)
+	•	image_url (VARCHAR(255), NULL)
+	•	post_type (ENUM(‘text’, ‘image’, ‘video’), DEFAULT ‘text’, NOT NULL)
+	•	created_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+	•	updated_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)
+
+	3.	Likes Table:
+	•	like_id (INT, Primary Key, Auto Increment)
+	•	post_id (INT, Foreign Key to Posts(post_id), NOT NULL)
+	•	user_id (INT, Foreign Key to Users(user_id), NOT NULL)
+	•	created_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+  
+	4.	Comments Table:
+	•	comment_id (INT, Primary Key, Auto Increment)
+	•	post_id (INT, Foreign Key to Posts(post_id), NOT NULL)
+	•	user_id (INT, Foreign Key to Users(user_id), NOT NULL)
+	•	content (TEXT, NOT NULL)
+	•	comment_type (ENUM(‘text’, ‘emoji’, ‘reaction’), DEFAULT ‘text’, NOT NULL)
+	•	created_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+	•	updated_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)

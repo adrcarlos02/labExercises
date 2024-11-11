@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6731a5bf32623a6036fe3d71"
+  },
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "hashed_password_123",
+  "birthday": "1990-01-15",
+  "profile_picture": "https://example.com/profile/john.png",
+  "created_at": "2024-11-10T10:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "6731a61f32623a6036fe3d73"
+  },
+  "name": "Jane Smith",
+  "email": "jane@example.com",
+  "password": "hashed_password_456",
+  "birthday": "1985-07-20",
+  "profile_picture": "https://example.com/profile/jane.png",
+  "created_at": "2024-11-10T10:05:00Z"
+},
+{
+  "_id": {
+    "$oid": "6731a64d32623a6036fe3d74"
+  },
+  "name": "Alice Johnson",
+  "email": "alice@example.com",
+  "password": "hashed_password_789",
+  "birthday": "1992-03-25",
+  "profile_picture": null,
+  "created_at": "2024-11-10T10:10:00Z"
+}]
