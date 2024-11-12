@@ -1,27 +1,38 @@
-// models/Item.js
+import { DataTypes } from "sequelize";
+import sequelize from "../config/database.js";
 
-import { DataTypes } from 'sequelize';
-import sequelize from '../config/database.js';
-
-const Item = sequelize.define('Item', {
-  // ... existing fields
-  status: {
-    type: DataTypes.ENUM('available', 'borrowed', 'reserved'),
-    allowNull: false,
-    defaultValue: 'available',
-  },
-  borrowerId: {
-    type: DataTypes.INTEGER,
-    allowNull: true,
-    references: {
-      model: 'Users',
-      key: 'id',
+const Item = sequelize.define(
+  "Item",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    onUpdate: 'CASCADE',
-    onDelete: 'SET NULL',
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    status: {
+      type: DataTypes.ENUM("available", "borrowed", "reserved"),
+      defaultValue: "available",
+    },
+    photo: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    categoryId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
-}, {
-  timestamps: true,
-});
+  {
+    timestamps: true,
+  }
+);
 
 export default Item;

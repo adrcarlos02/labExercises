@@ -1,5 +1,3 @@
-// controllers/itemController.js
-
 import { Item, Category, BorrowHistory, User } from '../models/index.js';
 import { Op } from 'sequelize';
 
@@ -11,6 +9,7 @@ import { Op } from 'sequelize';
 export const getAllItems = async (req, res) => {
   try {
     const items = await Item.findAll({
+      attributes: ['id', 'title', 'description', 'status', 'photo', 'categoryId', 'createdAt', 'updatedAt'],
       include: [
         { model: Category, as: 'category', attributes: ['id', 'name'] },
         { model: User, as: 'borrower', attributes: ['id', 'name', 'email'] },
@@ -30,6 +29,7 @@ export const getAllItems = async (req, res) => {
 export const getItemById = async (req, res) => {
   try {
     const item = await Item.findByPk(req.params.id, {
+      attributes: ['id', 'title', 'description', 'status', 'photo', 'categoryId', 'createdAt', 'updatedAt'],
       include: [
         { model: Category, as: 'category', attributes: ['id', 'name'] },
         { model: User, as: 'borrower', attributes: ['id', 'name', 'email'] },
@@ -50,18 +50,12 @@ export const getItemById = async (req, res) => {
 export const createItem = async (req, res) => {
   try {
     const { title, description, categoryId } = req.body;
-    let photo = null;
+    const photo = req.file ? `/uploads/${req.file.filename}` : null;
 
-    if (req.file) {
-      photo = `/uploads/${req.file.filename}`;
-    }
-
-    // Check if the category exists
+    // Validate category
     if (categoryId) {
       const category = await Category.findByPk(categoryId);
-      if (!category) {
-        return res.status(400).json({ error: 'Invalid category ID.' });
-      }
+      if (!category) return res.status(400).json({ error: 'Invalid category ID.' });
     }
 
     const item = await Item.create({ title, description, categoryId, photo });
@@ -82,23 +76,15 @@ export const updateItem = async (req, res) => {
     if (!item) return res.status(404).json({ error: 'Item not found.' });
 
     const { title, description, categoryId } = req.body;
-    let photo = item.photo;
+    const photo = req.file ? `/uploads/${req.file.filename}` : item.photo;
 
-    if (req.file) {
-      photo = `/uploads/${req.file.filename}`;
-    }
-
-    if (title) item.title = title;
-    if (description) item.description = description;
+    // Validate category
     if (categoryId) {
       const category = await Category.findByPk(categoryId);
-      if (!category) {
-        return res.status(400).json({ error: 'Invalid category ID.' });
-      }
-      item.categoryId = categoryId;
+      if (!category) return res.status(400).json({ error: 'Invalid category ID.' });
     }
-    item.photo = photo;
 
+    Object.assign(item, { title, description, categoryId, photo });
     await item.save();
 
     res.json({ message: 'Item updated successfully.', item });
@@ -122,7 +108,6 @@ export const deleteItem = async (req, res) => {
     }
 
     await item.destroy();
-
     res.json({ message: 'Item deleted successfully.' });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -148,7 +133,6 @@ export const borrowItem = async (req, res) => {
 
     await item.save();
 
-    // Create a borrow history record
     await BorrowHistory.create({
       userId: req.user.userId,
       itemId: item.id,
@@ -180,7 +164,6 @@ export const returnItem = async (req, res) => {
 
     await item.save();
 
-    // Update the borrow history record with return date
     const borrowRecord = await BorrowHistory.findOne({
       where: {
         userId: req.user.userId,

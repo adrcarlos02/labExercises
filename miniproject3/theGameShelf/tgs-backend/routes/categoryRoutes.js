@@ -12,11 +12,11 @@ import { authenticateToken, isAdmin } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-// Get all categories
-router.get('/', getAllCategories);
+// Get all categories (authenticated users)
+router.get('/', authenticateToken, getAllCategories);
 
-// Get category by ID
-router.get('/:id', getCategoryById);
+// Get category by ID (authenticated users)
+router.get('/:id', authenticateToken, getCategoryById);
 
 // Create category (admin only)
 router.post('/', authenticateToken, isAdmin, createCategory);
