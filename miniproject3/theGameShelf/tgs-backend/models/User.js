@@ -8,6 +8,19 @@ const User = sequelize.define("User", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  mobileNumber: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+    validate: {
+      isAustralianMobile(value) {
+        const australianMobileRegex = /^(\+?61|0)4\d{8}$/;
+        if (!australianMobileRegex.test(value)) {
+          throw new Error("Invalid Australian mobile number format.");
+        }
+      },
+    },
+  },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -16,20 +29,6 @@ const User = sequelize.define("User", {
       isEmail: true,
     },
   },
-  mobileNumber: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: {
-      isAustralianMobile(value) {
-        const australianMobileRegex = /^(\+614|04)\d{8}$/;
-        if (!australianMobileRegex.test(value)) {
-          throw new Error("Invalid Australian mobile number format.");
-        }
-      },
-    },
-  },
-
   password: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -38,6 +37,8 @@ const User = sequelize.define("User", {
     type: DataTypes.ENUM("user", "admin"),
     defaultValue: "user",
   },
+}, {
+  timestamps: true,
 });
 
 export default User;
