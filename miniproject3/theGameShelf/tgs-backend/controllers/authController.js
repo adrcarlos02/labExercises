@@ -1,5 +1,3 @@
-// controllers/authController.js
-
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
@@ -15,7 +13,7 @@ dotenv.config();
  * @access  Public
  */
 export const register = async (req, res) => {
-  // Handle validation errors
+  // Validate input
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
@@ -24,7 +22,7 @@ export const register = async (req, res) => {
   const { name, mobileNumber, email, password, role } = req.body;
 
   try {
-    // Check if user already exists with email or mobileNumber
+    // Check for existing user
     const existingUser = await User.findOne({
       where: {
         [Op.or]: [{ email }, { mobileNumber }],
@@ -35,13 +33,14 @@ export const register = async (req, res) => {
       return res.status(400).json({ error: 'Email or mobile number already exists.' });
     }
 
-    // Hash password with increased salt rounds for better security
-    const hashedPassword = await bcrypt.hash(password, 12);
+    // Hash the password
+    const saltRounds = 12;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-    // Prevent users from assigning themselves roles other than 'user'
-    const userRole = role && role === 'admin' ? 'admin' : 'user';
+    // Assign role (default to 'user')
+    const userRole = role === 'admin' ? 'admin' : 'user';
 
-    // Create user
+    // Create the user
     const newUser = await User.create({
       name,
       mobileNumber,
@@ -50,9 +49,9 @@ export const register = async (req, res) => {
       role: userRole,
     });
 
-    res.status(201).json({ message: 'User registered successfully.' });
+    res.status(201).json({ message: 'User registered successfully.', user: { name, email, role } });
   } catch (error) {
-    console.error('Registration Error:', error);
+    console.error('Registration Error:', error.message);
     res.status(500).json({ error: 'Internal Server Error.' });
   }
 };
@@ -63,16 +62,16 @@ export const register = async (req, res) => {
  * @access  Public
  */
 export const login = async (req, res) => {
-  // Handle validation errors
+  // Validate input
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const { identifier, password } = req.body; // 'identifier' can be email or mobile number
+  const { identifier, password } = req.body;
 
   try {
-    // Find user by email or mobileNumber
+    // Find user by email or mobile number
     const user = await User.findOne({
       where: {
         [Op.or]: [{ email: identifier }, { mobileNumber: identifier }],
@@ -83,7 +82,7 @@ export const login = async (req, res) => {
       return res.status(400).json({ error: 'Invalid email or mobile number.' });
     }
 
-    // Check password
+    // Verify password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return res.status(400).json({ error: 'Invalid password.' });
@@ -96,17 +95,17 @@ export const login = async (req, res) => {
       { expiresIn: '1h' }
     );
 
-    // Send token in cookie and response body
+    // Set cookie and respond
     res.cookie('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'Strict',
-      maxAge: 3600000, // 1 hour in milliseconds
+      maxAge: 3600000, // 1 hour
     });
 
-    res.json({ message: 'Logged in successfully.', token });
+    res.status(200).json({ message: 'Login successful.', token });
   } catch (error) {
-    console.error('Login Error:', error);
+    console.error('Login Error:', error.message);
     res.status(500).json({ error: 'Internal Server Error.' });
   }
 };
@@ -123,9 +122,9 @@ export const logout = (req, res) => {
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'Strict',
     });
-    res.json({ message: 'Logged out successfully.' });
+    res.status(200).json({ message: 'Logged out successfully.' });
   } catch (error) {
-    console.error('Logout Error:', error);
+    console.error('Logout Error:', error.message);
     res.status(500).json({ error: 'Internal Server Error.' });
   }
 };

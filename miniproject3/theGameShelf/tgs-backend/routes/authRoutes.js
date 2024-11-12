@@ -1,43 +1,55 @@
-// routes/userRoutes.js
-
 import express from 'express';
 import { body } from 'express-validator';
-import {
-  getAllUsers,
-  getUserById,
-  updateUser,
-  deleteUser,
-} from '../controllers/userController.js';
-import { authenticateToken, isAdmin } from '../middleware/authMiddleware.js';
+import { register, login, logout } from '../controllers/authController.js';
 
 const router = express.Router();
 
-// Get all users (admin only)
-router.get('/', authenticateToken, isAdmin, getAllUsers);
-
-// Get user by ID (authenticated user or admin)
-router.get('/:id', authenticateToken, getUserById);
-
-// Update user (authenticated user or admin)
-router.put(
-  '/:id',
-  authenticateToken,
+// Registration route with validation and sanitization
+router.post(
+  '/register',
   [
-    body('email').optional().isEmail().withMessage('Invalid email format.'),
+    body('name')
+      .trim()
+      .escape()
+      .notEmpty()
+      .withMessage('Name is required.'),
+    body('email')
+      .normalizeEmail()
+      .isEmail()
+      .withMessage('Invalid email format.'),
     body('mobileNumber')
-      .optional()
+      .trim()
       .matches(/^(\+?61|0)4\d{8}$/)
       .withMessage('Invalid Australian mobile number format.'),
     body('password')
-      .optional()
       .isLength({ min: 6 })
       .withMessage('Password must be at least 6 characters long.'),
-    body('role').optional().isIn(['user', 'admin']).withMessage('Invalid role.'),
+    body('role')
+      .optional()
+      .isIn(['user', 'admin'])
+      .withMessage('Role must be either user or admin.'),
   ],
-  updateUser
+  register
 );
 
-// Delete user (authenticated user or admin)
-router.delete('/:id', authenticateToken, deleteUser);
+// Login route with validation and sanitization
+router.post(
+  '/login',
+  [
+    body('identifier')
+      .trim()
+      .escape()
+      .notEmpty()
+      .withMessage('Email or mobile number is required.'),
+    body('password')
+      .escape()
+      .notEmpty()
+      .withMessage('Password is required.'),
+  ],
+  login
+);
+
+// Logout route (no validation needed)
+router.post('/logout', logout);
 
 export default router;
