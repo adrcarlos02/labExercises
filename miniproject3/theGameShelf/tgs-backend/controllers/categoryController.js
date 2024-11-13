@@ -1,6 +1,7 @@
 // controllers/categoryController.js
 
 import { Category } from '../models/index.js';
+import { Op } from 'sequelize';
 
 export const getAllCategories = async (req, res) => {
   try {
