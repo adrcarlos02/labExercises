@@ -1,0 +1,16 @@
+	Swagger Basics:
+	•	Defines the API version, title, description, and host information.
+	•	Specifies the available API paths and their corresponding operations.
+	
+  Endpoints:
+	•	/api/calculator/add: Adds two numbers.
+	•	/api/calculator/subtract: Subtracts two numbers.
+	•	/api/calculator/multiply: Multiplies two numbers.
+	•	/api/calculator/divide: Divides two numbers.
+	
+  Parameters:
+	•	Each endpoint expects num1 and num2 as query parameters.
+	
+  Responses:
+	•	200: Successful operation with a JSON object containing the result.
+	•	400: Invalid input error.

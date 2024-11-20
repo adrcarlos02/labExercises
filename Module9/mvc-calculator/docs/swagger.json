@@ -1,0 +1,165 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MVC Calculator API",
+    "description": "API documentation for the MVC Calculator application",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/api/calculator/add": {
+      "get": {
+        "summary": "Add two numbers",
+        "description": "Returns the sum of two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "First number",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "Second number",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/api/calculator/subtract": {
+      "get": {
+        "summary": "Subtract two numbers",
+        "description": "Returns the difference between two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "First number",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "Second number",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/api/calculator/multiply": {
+      "get": {
+        "summary": "Multiply two numbers",
+        "description": "Returns the product of two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "First number",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "Second number",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/api/calculator/divide": {
+      "get": {
+        "summary": "Divide two numbers",
+        "description": "Returns the quotient of two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "First number",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "Second number",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}

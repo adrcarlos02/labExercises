@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "8570ad02-5a63-4d89-a1de-21784f7bb896",
+		"name": "mongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38065915"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "logging_in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"john_doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create_post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MzcwNjYwN2JkZTEzNDEzNjZkNmJhMSIsImlhdCI6MTczMTY1OTUzNywiZXhwIjoxNzMxNzQ1OTM3fQ.b9HjMMvM_wDGEYLG5EnjYKjGnPdyz-SS_Qlk8cSDPw4",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "My First Blog Post",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is the content of my first post.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/private/var/folders/kg/j2rt726j5fn7m9z0p730rsj00000gn/T/com.apple.Photos.NSItemProvider/uuid=680EECE0-D4D5-4083-A9E4-7FB7EF7D075E&library=1&type=1&mode=1&loc=true&cap=true.jpeg/raphael-jordan-10.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_posts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get_post_ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/posts/673709c27bde1341366d6ba6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"posts",
+								"673709c27bde1341366d6ba6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MzcwNjYwN2JkZTEzNDEzNjZkNmJhMSIsImlhdCI6MTczMTY1OTUzNywiZXhwIjoxNzMxNzQ1OTM3fQ.b9HjMMvM_wDGEYLG5EnjYKjGnPdyz-SS_Qlk8cSDPw4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Midoriya",
+									"type": "text"
+								},
+								{
+									"key": "description ",
+									"value": "Updated content of the blog post.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/posts/673709c27bde1341366d6ba6?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"posts",
+								"673709c27bde1341366d6ba6"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MzcwNjYwN2JkZTEzNDEzNjZkNmJhMSIsImlhdCI6MTczMTY1OTUzNywiZXhwIjoxNzMxNzQ1OTM3fQ.b9HjMMvM_wDGEYLG5EnjYKjGnPdyz-SS_Qlk8cSDPw4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/posts/67370b867bde1341366d6bb4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"posts",
+								"67370b867bde1341366d6bb4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like",
+			"item": []
+		},
+		{
+			"name": "comment",
+			"item": []
+		},
+		{
+			"name": "base_url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001"
+				}
+			},
+			"response": []
+		}
+	]
+}
